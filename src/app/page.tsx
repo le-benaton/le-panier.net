@@ -24,18 +24,15 @@ export default function Home() {
           </ul>
           <li>レストラン</li>
           <ul className="list-inside pl-4 list-disc">
-            <li>レストラン利用</li>
-            <li>バー利用</li>
+            <li>レストラン・バー利用</li>
           </ul>
           <li>
             イベント会場
             <ul className="list-inside pl-4 list-disc">
               <li>テイスティングイベント</li>
-              <li>ポップアップレストラン</li>
               <li>WebフロントエンドMeetup</li>
             </ul>
           </li>
-          <li>卸（事業者向け）</li>
         </ol>
       </main>
     </div>
