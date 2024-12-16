@@ -14,7 +14,7 @@ export default function Home() {
         />
         <ol
           className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li>フレンチお惣菜</li>
+          <li>フレンチシェフの作るお惣菜</li>
           <ul className="list-inside pl-4 list-disc">
             <li>冷製</li>
             <li>温製</li>
@@ -22,7 +22,7 @@ export default function Home() {
             <li>野菜</li>
             <li>煮込</li>
           </ul>
-          <li>お惣菜レストラン</li>
+          <li>レストラン</li>
           <ul className="list-inside pl-4 list-disc">
             <li>レストラン利用</li>
             <li>バー利用</li>
