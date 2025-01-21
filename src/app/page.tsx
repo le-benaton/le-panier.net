@@ -85,8 +85,8 @@ export default function Home() {
                   </tr>
 
                   <tr>
-                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">オープン予定日</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2025年3月中旬</td>
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">オープン</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2025年3月中旬（予定）</td>
                   </tr>
                   </tbody>
                 </table>
