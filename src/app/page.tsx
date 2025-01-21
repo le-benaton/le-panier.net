@@ -71,7 +71,17 @@ export default function Home() {
 
                   <tr>
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">住所</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">兵庫県西宮市千歳町6番16号（<a href="https://maps.app.goo.gl/v9Zc3TdAsB8ttLACA" target="_blank">Google Map</a>）</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">兵庫県西宮市千歳町6番16号（<a
+                      href="https://maps.app.goo.gl/v9Zc3TdAsB8ttLACA" target="_blank" className="underline">Google
+                      Map</a>）
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">営業時間</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                      11:00～22:00 / 水曜日定休日（予定）
+                    </td>
                   </tr>
 
                   <tr>
