@@ -17,26 +17,26 @@ export const metadata: Metadata = {
   description: "西宮・夙川のフレンチ惣菜店",
   icons: [
     {
-      href: "/favicon-96x96.png",
+      href: "/favicon/favicon-96x96.png",
       sizes: "96x96",
       type: "image/png",
-      url: "/favicon-96x96.png",
+      url: "/favicon/favicon-96x96.png",
     },
     {
-      href: "/favicon.svg",
+      href: "/favicon/favicon.svg",
       type: "image/svg+xml",
-      url: "/favicon.svg",
+      url: "/favicon/favicon.svg",
     },
     {
       rel: "shortcut icon",
-      href: "/favicon.ico",
-      url: "/favicon.ico",
+      href: "/favicon/favicon.ico",
+      url: "/favicon/favicon.ico",
     },
     {
       rel: "apple-touch-icon",
-      href: "/apple-touch-icon.png",
+      href: "/favicon/apple-touch-icon.png",
       sizes: "180x180",
-      url: "/apple-touch-icon.png",
+      url: "/favicon/apple-touch-icon.png",
     },
   ]
 };
