@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "le panier",
-  description: "西宮・夙川のフレンチシェフのお惣菜のお店",
+  title: "ル パニエ｜西宮・夙川のフレンチシェフが手掛けるデリカテッセン（お惣菜）とワインのお店",
+  description: "西宮・夙川のフレンチシェフが手掛けるデリカテッセン（お惣菜）とワインのお店。",
   icons: [
     {
       href: "/favicon/favicon-96x96.png",
