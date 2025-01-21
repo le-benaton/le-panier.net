@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="md:flex justify-between pt-8 pb-8">
+      <div className="md:flex justify-between pt-8 pb-8 max-w-7xl m-auto">
         <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
