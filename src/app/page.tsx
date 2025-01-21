@@ -53,7 +53,7 @@ export default function Home() {
       <div className="p-5">
         <h2 className="text-center text-2xl font-serif m-8">
           美味しい食とお酒を日常に。<br/>
-          西宮市夙川で、2025年3月中旬オープン。
+          西宮市夙川に、2025年3月中旬オープン。
         </h2>
         <div className="flex flex-col max-w-3xl m-auto">
           <div className="-m-1.5 overflow-x-auto">
