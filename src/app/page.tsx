@@ -51,10 +51,13 @@ export default function Home() {
       </div>
 
       <div className="p-5">
-        <h2 className="text-center text-2xl font-serif m-8">
+        <h2 className="text-center text-2xl font-serif mt-8">
           美味しい食とお酒を日常に。<br/>
           西宮市夙川に、2025年3月中旬オープン。
         </h2>
+        <h3 className="text-center m-6 text-gray-500">
+          <a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、“日常の美味しい”
+        </h3>
         <div className="flex flex-col max-w-3xl m-auto">
           <div className="-m-1.5 overflow-x-auto">
             <div className="p-1.5 min-w-full inline-block align-middle">
@@ -63,7 +66,7 @@ export default function Home() {
                   <tbody className="divide-y divide-gray-200">
                   <tr>
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">店舗名</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">le panier （ル　パニエ）</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">le panier （ル パニエ）</td>
                   </tr>
 
                   <tr>
@@ -79,6 +82,72 @@ export default function Home() {
                 </table>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-between">
+        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+          <Image
+            className="w-auto max-w-none h-44 object-cover"
+            src="/images/colum-delica.jpeg"
+            alt="le panier perspective_1"
+            width={1523}
+            height={634}
+            priority
+          />
+          <div className="p-4 md:p-5">
+            <h3 className="text-lg font-bold text-gray-800">
+              デリカテッセン
+            </h3>
+            <p className="mt-1 text-gray-500">
+              毎日の食卓に、ちょっとした楽しさと喜びをお届けするため、旬の食材をふんだんに使った料理を日替わり週替りでお楽しみいただけます。
+            </p>
+            <p className="mt-3 text-gray-500">
+              お忙しい日々の中でも、心温まる味わいでほっと一息つけるような、そんなお惣菜をご提供します。
+            </p>
+          </div>
+        </div>
+        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3">
+          <Image
+            className="w-auto max-w-none h-44 object-cover"
+            src="/images/colum-restaurant.jpeg"
+            alt="le panier perspective_1"
+            width={1523}
+            height={634}
+            priority
+          />
+          <div className="p-4 md:p-5">
+            <h3 className="text-lg font-bold text-gray-800">
+              レストラン、バー
+            </h3>
+            <p className="mt-1 text-gray-500">
+              お惣菜は店内でもお楽しみいただけるほか、お店でしか味わえない特別なメニューもご用意しています。
+            </p>
+            <p className="mt-3 text-gray-500">
+              最大10席のカウンターバーで、おすすめのカフェやワインと共に、お惣菜をお楽しみいただけます。
+            </p>
+          </div>
+        </div>
+        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3">
+          <Image
+            className="w-auto max-w-none h-44 object-cover"
+            src="/images/colum-event.jpg"
+            alt="le panier perspective_1"
+            width={1523}
+            height={634}
+            priority
+          />
+          <div className="p-4 md:p-5">
+            <h3 className="text-lg font-bold text-gray-800">
+              イベント
+            </h3>
+            <p className="mt-1 text-gray-500">
+              季節のイベントやコラボイベントを開催予定。ワインの飲み比べや、音楽を聞かせて熟成させた日本酒、また生産者を招いてのテイスティングイベントに興味はありませんか？
+            </p>
+            <p className="mt-3 text-gray-500">
+              少人数だからこそできる体験を、ぜひお楽しみください。
+            </p>
           </div>
         </div>
       </div>
