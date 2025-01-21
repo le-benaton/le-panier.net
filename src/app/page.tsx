@@ -50,7 +50,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="p-5">
+      <div className="p-5 pt-8 pb-12">
         <h2 className="text-center text-2xl font-serif mt-8">
           美味しい食とお酒を日常に。<br/>
           西宮市夙川に、2025年3月中旬オープン。
@@ -86,8 +86,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-between">
-        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+      <div className="md:flex justify-between pt-8 pb-8">
+        <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-delica.jpeg"
@@ -108,7 +108,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+        <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-restaurant.jpeg"
@@ -129,7 +129,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+        <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-event.jpg"
