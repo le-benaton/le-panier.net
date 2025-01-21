@@ -108,7 +108,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3">
+        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-restaurant.jpeg"
@@ -129,7 +129,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3">
+        <div className="w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-event.jpg"
