@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Logo from '@/app/logo';
 
 export default function Home() {
   return (
@@ -10,13 +11,8 @@ export default function Home() {
             <a className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80" href="#"
                aria-label="Brand">
               <span className="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white">
-                <Image
-                  className="w-40 h-auto"
-                  src="/logo.svg"
-                  alt="le panier logo"
-                  width={180}
-                  height={38}
-                  priority
+                <Logo
+                  className="w-40 h-auto fill-black dark:fill-gray-50"
                 />
               </span>
             </a>
@@ -55,7 +51,7 @@ export default function Home() {
           美味しい食とお酒を日常に。<br/>
           西宮市夙川に、2025年3月中旬オープン。
         </h2>
-        <h3 className="text-center m-6 text-gray-500">
+        <h3 className="text-center m-6 text-gray-500 dark:text-gray-400">
           <a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、“日常の美味しい”
         </h3>
         <div className="flex flex-col max-w-3xl m-auto">
@@ -64,29 +60,29 @@ export default function Home() {
               <div className="border rounded-lg shadow">
                 <table className="min-w-full divide-y divide-gray-200">
                   <tbody className="divide-y divide-gray-200">
-                  <tr>
-                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">店舗名</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">le panier （ル パニエ）</td>
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">店舗名</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm ">le panier （ル パニエ）</td>
                   </tr>
 
-                  <tr>
-                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">住所</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">兵庫県西宮市千歳町6番16号（<a
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">住所</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">兵庫県西宮市千歳町6番16号（<a
                       href="https://maps.app.goo.gl/v9Zc3TdAsB8ttLACA" target="_blank" className="underline">Google
                       Map</a>）
                     </td>
                   </tr>
 
-                  <tr>
-                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">営業時間</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">営業時間</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">
                       11:00～22:00 / 水曜日定休日（予定）
                     </td>
                   </tr>
 
-                  <tr>
-                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">オープン</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2025年3月中旬（予定）</td>
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">オープン</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">2025年3月中旬（予定）</td>
                   </tr>
                   </tbody>
                 </table>
@@ -97,7 +93,8 @@ export default function Home() {
       </div>
 
       <div className="md:flex justify-between pt-8 pb-8 max-w-7xl m-auto">
-        <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+        <div
+          className="md:w-1/3 flex flex-col bg-white dark:bg-gray-950 border shadow-sm dark:border-gray-700 rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-delica.jpeg"
@@ -106,19 +103,20 @@ export default function Home() {
             height={634}
             priority
           />
-          <div className="p-4 md:p-5">
-            <h3 className="text-lg font-bold text-gray-800">
+          <div className="p-4 md:p-5 text-gray-800 dark:text-gray-100">
+            <h3 className="text-lg font-bold">
               デリカテッセン
             </h3>
-            <p className="mt-1 text-gray-500">
+            <p className="mt-1">
               毎日の食卓に、ちょっとした楽しさと喜びをお届けするため、旬の食材をふんだんに使った料理を日替わり週替りでご用意いたします。
             </p>
-            <p className="mt-3 text-gray-500">
+            <p className="mt-3">
               お忙しい日々の中でも、心温まる味わいでほっと一息つけるような、そんな持ち帰りお惣菜をご提供します。
             </p>
           </div>
         </div>
-        <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+        <div
+          className="md:w-1/3 flex flex-col bg-white dark:bg-gray-950 border shadow-sm dark:border-gray-700 rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-restaurant.jpeg"
@@ -127,19 +125,20 @@ export default function Home() {
             height={634}
             priority
           />
-          <div className="p-4 md:p-5">
-            <h3 className="text-lg font-bold text-gray-800">
+          <div className="p-4 md:p-5 text-gray-800 dark:text-gray-100">
+            <h3 className="text-lg font-bold">
               レストラン、バー
             </h3>
-            <p className="mt-1 text-gray-500">
+            <p className="mt-1">
               お惣菜は店内でもお楽しみいただけるほか、お店でしか味わえない特別なメニューもご用意しています。
             </p>
-            <p className="mt-3 text-gray-500">
+            <p className="mt-3">
               最大10席のカウンターバーで、おすすめのカフェやワインと共に、お料理をお楽しみいただけます。
             </p>
           </div>
         </div>
-        <div className="md:w-1/3 flex flex-col bg-white border shadow-sm rounded-xl m-3 overflow-hidden">
+        <div
+          className="md:w-1/3 flex flex-col bg-white dark:bg-gray-950 border shadow-sm dark:border-gray-700 rounded-xl m-3 overflow-hidden">
           <Image
             className="w-auto max-w-none h-44 object-cover"
             src="/images/colum-event.jpg"
@@ -148,14 +147,14 @@ export default function Home() {
             height={634}
             priority
           />
-          <div className="p-4 md:p-5">
-            <h3 className="text-lg font-bold text-gray-800">
+          <div className="p-4 md:p-5 text-gray-800 dark:text-gray-100">
+            <h3 className="text-lg font-bold">
               イベント
             </h3>
-            <p className="mt-1 text-gray-500">
+            <p className="mt-1">
               季節のイベントやコラボイベントを開催予定。ワインの飲み比べや、音楽を聞かせて熟成させた日本酒、また生産者を招いてのテイスティングイベントに興味はありませんか？
             </p>
-            <p className="mt-3 text-gray-500">
+            <p className="mt-3">
               少人数だからこそできる体験を、ぜひお楽しみください。
             </p>
           </div>
