@@ -1,13 +1,19 @@
 "use client";
 
-import { useState } from 'react'
+import {useEffect, useState} from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 
 export default function SelectDialog() {
-  const url = new URL(window.location.href);
-  const fromParam = url.searchParams.get("from")
 
-  const [open, setOpen] = useState(fromParam === "card")
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      const fromParam = url.searchParams.get("from")
+      setOpen(fromParam === "card")
+    }
+  }, [])
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-10">
