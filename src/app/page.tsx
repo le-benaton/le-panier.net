@@ -54,7 +54,8 @@ export default function Home() {
           西宮市夙川に、2025年3月中旬オープン。
         </h2>
         <h3 className="text-center m-6 text-gray-500 dark:text-gray-400">
-          <a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、“日常の美味しい”
+          {/*<a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、*/}
+          フレンチシェフが手掛ける、“日常の美味しい”
         </h3>
         <div className="flex flex-col max-w-3xl m-auto">
           <div className="-m-1.5 overflow-x-auto">
