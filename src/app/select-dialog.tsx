@@ -45,7 +45,7 @@ export default function SelectDialog() {
             <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border" onClick={() => setOpen(false)}>
               公式サイト
             </button>
-            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center" onClick={() => location.href = 'https://maps.app.goo.gl/v9Zc3TdAsB8ttLACA'}>
+            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center" onClick={() => location.href = 'https://maps.app.goo.gl/3iFyke5yY3TKVifp8'}>
               Google Map
             </button>
           </DialogPanel>
