@@ -54,8 +54,8 @@ export default function Home() {
           西宮市夙川に、2025年3月中旬オープン。
         </h2>
         <h3 className="text-center m-6 text-gray-500 dark:text-gray-400">
-          {/*<a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、*/}
-          フレンチシェフが手掛ける、“日常の美味しい”
+          <a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、
+          “日常の美味しい”
         </h3>
         <div className="flex flex-col max-w-3xl m-auto">
           <div className="-m-1.5 overflow-x-auto">
@@ -79,13 +79,18 @@ export default function Home() {
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">営業時間</th>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      11:00～22:00 / 水曜日定休日（予定）
+                      11:00～22:00
                     </td>
                   </tr>
 
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">オープン</th>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">2025年3月中旬（予定）</td>
+                  </tr>
+
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">予約・お問合せ</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500"><a href="https://lin.ee/h2BUTwy" target="_blank">LINE公式アカウント</a></td>
                   </tr>
                   </tbody>
                 </table>

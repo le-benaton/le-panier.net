@@ -45,8 +45,11 @@ export default function SelectDialog() {
             <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border" onClick={() => setOpen(false)}>
               公式サイト
             </button>
-            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center" onClick={() => location.href = 'https://maps.app.goo.gl/3iFyke5yY3TKVifp8'}>
+            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border" onClick={() => location.href = 'https://maps.app.goo.gl/3iFyke5yY3TKVifp8'}>
               Google Map
+            </button>
+            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center" onClick={() => location.href = 'https://lin.ee/h2BUTwy'}>
+              予約・お問合せ（LINE公式アカウント）
             </button>
           </DialogPanel>
         </div>
