@@ -51,7 +51,7 @@ export default function Home() {
       <div className="p-5 pt-8 pb-12">
         <h2 className="text-center text-2xl font-serif mt-8">
           美味しい食とお酒を日常に。<br/>
-          西宮市夙川に、2025年3月22日(土)オープン。
+          西宮市夙川に、2025年3月21日(金)オープン。
         </h2>
         <h3 className="text-center m-6 text-gray-500 dark:text-gray-400">
           <a href="https://benaton.net/" target="_blank" className="underline">「ル ベナトン」</a>の高谷慶が手掛ける、
@@ -85,7 +85,7 @@ export default function Home() {
 
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">オープン</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">2025年3月22日(土)</td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">2025年3月21日(金)</td>
                   </tr>
 
                   <tr className=" text-gray-800 dark:text-gray-200">
