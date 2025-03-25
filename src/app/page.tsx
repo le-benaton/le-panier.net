@@ -90,7 +90,7 @@ export default function Home() {
 
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">予約・お問合せ</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500"><a href="https://lin.ee/h2BUTwy" target="_blank" style={{ display: 'block'}}>LINE公式アカウント</a></td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500"><a href="https://lin.ee/h2BUTwy" target="_blank" style={{ display: 'block !important'}}>LINE公式アカウント</a></td>
                   </tr>
                   </tbody>
                 </table>
