@@ -71,7 +71,7 @@ export default function Home() {
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">住所</th>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">兵庫県西宮市千歳町6番16号（<a
-                      href="https://maps.app.goo.gl/v9Zc3TdAsB8ttLACA" target="_blank" className="underline">Google
+                      href="https://maps.app.goo.gl/qibejWXogWvvwiks8" target="_blank" className="underline text-blue-500">Google
                       Map</a>）
                     </td>
                   </tr>
