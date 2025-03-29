@@ -84,13 +84,17 @@ export default function Home() {
                   </tr>
 
                   <tr className=" text-gray-800 dark:text-gray-200">
-                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">オープン</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">2025年3月21日(金)</td>
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">Instagram</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                      <a href="https://www.instagram.com/le_panier_benaton/" target="_blank" className=" text-blue-500">@le_panier_benaton</a>
+                    </td>
                   </tr>
 
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">予約・お問合せ</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500"><a href="https://lin.ee/h2BUTwy" target="_blank" style={{ display: 'block !important'}}>LINE公式アカウント</a></td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
+                      <a href="https://lin.ee/h2BUTwy" target="_blank" style={{ display: 'block !important'}}>LINE公式アカウント</a>
+                    </td>
                   </tr>
                   </tbody>
                 </table>
