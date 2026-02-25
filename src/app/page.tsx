@@ -21,29 +21,32 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <div className="flex overflow-scroll bg-black/[.15]">
+      <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/[.15]">
         <Image
-          className="w-auto max-w-none h-72"
-          src="/images/perspective_1.png"
-          alt="le panier perspective_1"
-          width={1523}
-          height={634}
+          className="crossfade-image object-cover"
+          style={{ animation: 'crossfade 12s infinite' }}
+          src="/images/mv_1.jpg"
+          alt="le panier の外観写真"
+          fill
+          sizes="100vw"
           priority
         />
         <Image
-          className="w-auto max-w-none h-72"
-          src="/images/perspective_2.png"
-          alt="le panier perspective_2"
-          width={1362}
-          height={608}
+          className="crossfade-image object-cover"
+          style={{ animation: 'crossfade 12s infinite', animationDelay: '-8s' }}
+          src="/images/mv_2.jpg"
+          alt="le panier の内観写真"
+          fill
+          sizes="100vw"
           priority
         />
         <Image
-          className="w-auto max-w-none h-72"
-          src="/images/perspective_3.png"
-          alt="le panier perspective_3"
-          width={1642}
-          height={592}
+          className="crossfade-image object-cover"
+          style={{ animation: 'crossfade 12s infinite', animationDelay: '-4s' }}
+          src="/images/mv_3.jpg"
+          alt="le panier のアラカルトの写真"
+          fill
+          sizes="100vw"
           priority
         />
       </div>
@@ -88,10 +91,20 @@ export default function Home() {
                       </td>
                     </tr>
 
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">営業時間</th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm">11:00～22:00</td>
-                    </tr>
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">営業時間</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                      11:00～21:00<br/>
+                      金・土のみ11:00～24:00
+                    </td>
+                  </tr>
+
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">定休日</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                      水曜日
+                    </td>
+                  </tr>
 
                     <tr className=" text-gray-800 dark:text-gray-200">
                       <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">Instagram</th>
@@ -106,20 +119,13 @@ export default function Home() {
                       </td>
                     </tr>
 
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        予約・お問合せ
-                      </th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
-                        <a
-                          href="https://lin.ee/h2BUTwy"
-                          target="_blank"
-                          style={{ display: "block !important" }}
-                        >
-                          LINE公式アカウント
-                        </a>
-                      </td>
-                    </tr>
+                  <tr className=" text-gray-800 dark:text-gray-200">
+                    <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">予約・お問合せ</th>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
+                      <a href="https://lin.ee/h2BUTwy" target="_blank" style={{ display: 'block !important'}}>LINE公式アカウント</a><br/>
+                      <a href="https://www.hotpepper.jp/strJ004469357/yoyaku/?vos=othpporgzzzzx00000001" target="_blank" className=" text-blue-500">ホットペッパー</a>
+                    </td>
+                  </tr>
                   </tbody>
                 </table>
               </div>
