@@ -173,31 +173,40 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex overflow-scroll bg-black/[.15]">
-        <Image
-          className="w-auto max-w-none h-72"
-          src="/images/drawing_2.svg"
-          alt="le panier drawing_1"
-          width={1523}
-          height={634}
-          priority
-        />
-        <Image
-          className="w-auto max-w-none h-72 m-2"
-          src="/images/drawing_1.svg"
-          alt="le panier drawing_1"
-          width={1362}
-          height={608}
-          priority
-        />
-        <Image
-          className="w-auto max-w-none h-72 m-2"
-          src="/images/drawing_3.svg"
-          alt="le panier drawing_1"
-          width={1642}
-          height={592}
-          priority
-        />
+      <div className="grid md:grid-cols-2">
+        <div className="h-72 md:h-auto md:min-h-96">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.5688371055335!2d135.3279881127118!3d34.74126097279224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f3a2c059a473%3A0x9e92f9a9e8539a22!2zbGUgcGFuaWVyICjjg6sg44OR44OL44KoKSDlpJnlt53lupc!5e0!3m2!1sja!2sjp!4v1772196418618!5m2!1sja!2sjp" className="w-full h-full border-0"  allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div className="p-5 md:p-12 text-gray-800 dark:text-gray-200">
+          <dl className="space-y-4">
+            <div>
+              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">店舗名</dt>
+              <dd className="mt-1">le panier （ル パニエ）</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">住所</dt>
+              <dd className="mt-1">
+                兵庫県西宮市千歳町6番16号（<a href="https://maps.app.goo.gl/qibejWXogWvvwiks8" target="_blank" className="underline text-blue-500">Google Map</a>）
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">営業時間</dt>
+              <dd className="mt-1">11:00～22:00</dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Instagram</dt>
+              <dd className="mt-1">
+                <a href="https://www.instagram.com/le_panier_benaton/" target="_blank" className="text-blue-500">@le_panier_benaton</a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">予約・お問合せ</dt>
+              <dd className="mt-1">
+                <a href="https://lin.ee/h2BUTwy" target="_blank" className="text-blue-500">LINE公式アカウント</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </>
   );
