@@ -93,8 +93,8 @@ export default function Home() {
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">営業時間</th>
                     <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      11:00～21:00<br/>
-                      金・土のみ11:00～24:00
+                      11時〜21時<br/>
+                      金・土のみ11時〜24時
                     </td>
                   </tr>
 
@@ -120,9 +120,8 @@ export default function Home() {
 
                   <tr className=" text-gray-800 dark:text-gray-200">
                     <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">予約・お問合せ</th>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
-                      <a href="https://lin.ee/h2BUTwy" target="_blank" style={{ display: 'block !important'}}>LINE公式アカウント</a><br/>
-                      <a href="https://www.hotpepper.jp/strJ004469357/yoyaku/?vos=othpporgzzzzx00000001" target="_blank" className=" text-blue-500">ホットペッパー</a>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm">
+                      <a href="https://lin.ee/h2BUTwy" target="_blank" className="text-blue-500 underline">LINE公式アカウント</a> または <a href="https://www.hotpepper.jp/strJ004469357/yoyaku/?vos=othpporgzzzzx00000001" target="_blank" className=" text-blue-500 underline">ホットペッパー</a>
                     </td>
                   </tr>
                   </tbody>
