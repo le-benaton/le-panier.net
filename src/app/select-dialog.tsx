@@ -1,13 +1,13 @@
 "use client";
 
-import {Suspense, useState} from 'react'
-import { useSearchParams } from 'next/navigation'
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 
 function SelectDialogContent() {
-  const searchParams = useSearchParams()
-  const [dismissed, setDismissed] = useState(false)
-  const open = searchParams.get("from") === "card" && !dismissed
+  const searchParams = useSearchParams();
+  const [dismissed, setDismissed] = useState(false);
+  const open = searchParams.get("from") === "card" && !dismissed;
 
   return (
     <Dialog open={open} onClose={() => setDismissed(true)} className="relative z-10">
@@ -36,23 +36,35 @@ function SelectDialogContent() {
                 </div>
               </div>
             </div>
-            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border" onClick={() => setDismissed(true)}>
+            <button
+              className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border"
+              onClick={() => setDismissed(true)}
+            >
               公式サイト
             </button>
-            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center" onClick={() => location.href = 'https://maps.app.goo.gl/3iFyke5yY3TKVifp8'}>
+            <button
+              className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center"
+              onClick={() => (location.href = "https://maps.app.goo.gl/3iFyke5yY3TKVifp8")}
+            >
               Google Map
             </button>
-            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border" onClick={() => location.href = 'https://www.instagram.com/le_panier_benaton/'}>
+            <button
+              className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border"
+              onClick={() => (location.href = "https://www.instagram.com/le_panier_benaton/")}
+            >
               Instagram
             </button>
-            <button className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center" onClick={() => location.href = 'https://lin.ee/h2BUTwy'}>
+            <button
+              className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center"
+              onClick={() => (location.href = "https://lin.ee/h2BUTwy")}
+            >
               予約・お問合せ（LINE公式アカウント）
             </button>
           </DialogPanel>
         </div>
       </div>
     </Dialog>
-  )
+  );
 }
 
 export default function SelectDialog() {
@@ -60,5 +72,5 @@ export default function SelectDialog() {
     <Suspense>
       <SelectDialogContent />
     </Suspense>
-  )
+  );
 }

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       sizes: "180x180",
       url: "/favicon/apple-touch-icon.png",
     },
-  ]
+  ],
 };
 
 export default function RootLayout({
@@ -48,11 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
 }
