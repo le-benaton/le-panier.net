@@ -24,19 +24,3 @@ svg {
   fill: currentColor;
 }
 
-@keyframes crossfade {
-  0%     { opacity: 1; }
-  22.22% { opacity: 1; }
-  33.33% { opacity: 0; }
-  88.88% { opacity: 0; }
-  100%   { opacity: 1; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .crossfade-image:not(:first-child) {
-    display: none;
-  }
-  .crossfade-image {
-    animation: none !important;
-  }
-}

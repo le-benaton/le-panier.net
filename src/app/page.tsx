@@ -1,7 +1,18 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Logo from '@/app/logo';
 import FeatureSection from '@/app/feature-section';
 import SelectDialog from '@/app/select-dialog';
+import ImageGallery from '@/app/image-gallery';
+
+const galleryDir = path.join(process.cwd(), "public/images/gallery");
+const galleryImages = fs.existsSync(galleryDir)
+  ? fs.readdirSync(galleryDir)
+      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+      .sort()
+      .map((file) => `/images/gallery/${file}`)
+  : [];
 
 export default function Home() {
   return (
@@ -24,28 +35,9 @@ export default function Home() {
       </header>
       <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/[.15]">
         <Image
-          className="crossfade-image object-cover"
-          style={{ animation: 'crossfade 12s infinite' }}
-          src="/images/mv_1.jpg"
+          className="object-cover"
+          src="/images/mv.jpg"
           alt="le panier の外観写真"
-          fill
-          sizes="100vw"
-          priority
-        />
-        <Image
-          className="crossfade-image object-cover"
-          style={{ animation: 'crossfade 12s infinite', animationDelay: '-8s' }}
-          src="/images/mv_2.jpg"
-          alt="le panier の内観写真"
-          fill
-          sizes="100vw"
-          priority
-        />
-        <Image
-          className="crossfade-image object-cover"
-          style={{ animation: 'crossfade 12s infinite', animationDelay: '-4s' }}
-          src="/images/mv_3.jpg"
-          alt="le panier のアラカルトの写真"
           fill
           sizes="100vw"
           priority
@@ -165,6 +157,8 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      <ImageGallery images={galleryImages} />
 
       <div className="flex overflow-scroll bg-black/[.15]">
         <Image
