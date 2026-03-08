@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
-import Logo from '@/app/logo';
+import Link from "next/link";
+import Header from '@/app/header';
 import FeatureSection from '@/app/feature-section';
 import SelectDialog from '@/app/select-dialog';
 import ImageGallery from '@/app/image-gallery';
@@ -18,22 +19,9 @@ export default function Home() {
   return (
     <>
       <SelectDialog />
-      <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-neutral-800">
-        <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
-          <div className="flex items-center justify-between">
-            <a className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80" href="#"
-               aria-label="Brand">
-              <h1 className="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white">
-                <Logo
-                  className="w-40 h-auto fill-black dark:fill-gray-50"
-                />
-                <span className="sr-only">le panier（ル パニエ）</span>
-              </h1>
-            </a>
-          </div>
-        </nav>
-      </header>
-      <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/[.15]">
+      <Header isTopPage />
+      <main>
+        <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/[.15]">
         <Image
           className="object-cover"
           src="/images/mv.jpg"
@@ -135,10 +123,18 @@ export default function Home() {
               </p>
               <h4 className="text-lg font-bold font-serif mt-4 mb-1">販売しているお惣菜の一例</h4>
               <ul className="list-disc ml-5">
-                <li>定番で常にある商品 / ○○円</li>
-                <li>定番で常にある商品（100g） / ○○円</li>
-                <li>定番で常にある商品 / ○○円</li>
+                <li>ラザニア(1切れ) / 950円</li>
+                <li>砂肝のコンフィ(100g) / 500円</li>
+                <li>ローストビーフ(1g) / 10円</li>
               </ul>
+              <div className="mt-4">
+                <Link
+                  href="/delicatessen"
+                  className="inline-block px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300"
+                >
+                  メニューを見る
+                </Link>
+              </div>
             </FeatureSection>
             <FeatureSection imageSrc="/images/colum-event.jpg" imageAlt="イベントの写真" title="イベント会場としてのご利用" imageObjectPosition="object-center">
               <p className="mt-1">
@@ -186,6 +182,7 @@ export default function Home() {
           priority
         />
       </div>
+      </main>
     </>
   );
 }
