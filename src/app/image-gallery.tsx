@@ -47,25 +47,18 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
             className={`relative aspect-square rounded overflow-hidden cursor-pointer
               ring-offset-2 focus-visible:ring-2 focus-visible:ring-blue-500
               ${
-                index === selectedIndex
-                  ? "ring-2 ring-blue-500"
-                  : "opacity-70 hover:opacity-100"
+                index === selectedIndex ? "ring-2 ring-blue-500" : "opacity-70 hover:opacity-100"
               } transition-opacity`}
           >
-            <Image
-              src={src}
-              alt=""
-              fill
-              sizes="120px"
-              className="object-cover"
-            />
+            <Image src={src} alt="" fill sizes="120px" className="object-cover" />
           </button>
         ))}
       </div>
 
       <div className="text-center mt-8">
         <p className="text-gray-500 dark:text-gray-400 mb-4">
-          お店の様子やイベント情報は<br />
+          お店の様子やイベント情報は
+          <br />
           Instagramでも日々お届けしています
         </p>
         <a
