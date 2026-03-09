@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/app/header";
 
@@ -9,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 const regularMenuItems = [
-  { name: "ラザニア", unit: "1切れ", price: "950円" },
-  { name: "砂肝のコンフィ", unit: "100g", price: "500円" },
-  { name: "ローストビーフ", unit: "1g", price: "10円" },
+  { name: "ラザニア", unit: "1切れ", price: "950円", image: "/images/deli_1.jpg" },
+  { name: "砂肝のコンフィ", unit: "100g", price: "500円", image: "/images/deli_2.jpg" },
+  { name: "ローストビーフ", unit: "1g", price: "10円", image: "/images/deli_3.jpg" },
 ];
 
 const recommendedMenuItems = [
@@ -36,9 +37,7 @@ export default function DelicatessenPage() {
 
       <main>
         <div className="py-14 px-4">
-          <h1 className="text-2xl font-serif text-center mb-4">
-            デリカテッセン（惣菜販売）
-          </h1>
+          <h1 className="text-2xl font-serif text-center mb-4">デリカテッセン（惣菜販売）</h1>
           <p className="text-center text-gray-500 dark:text-gray-400">
             フレンチレストラン「ル ベナトン」のシェフが手掛けるフレンチ惣菜
           </p>
@@ -46,23 +45,19 @@ export default function DelicatessenPage() {
 
         <section className="bg-stone-100 dark:bg-stone-900 py-14">
           <div className="px-4 max-w-5xl m-auto">
-            <h2 className="text-xl font-bold font-serif text-center mb-8">
-              メニュー
-            </h2>
+            <h2 className="text-xl font-bold font-serif text-center mb-8">メニュー</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-10">
               {regularMenuItems.map((item) => (
                 <div
                   key={item.name}
                   className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow"
                 >
-                  <div className="aspect-video bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                    <span className="text-gray-400">写真準備中</span>
+                  <div className="aspect-video relative">
+                    <Image src={item.image} alt={item.name} fill className="object-cover" />
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold font-serif">{item.name}</h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {item.unit}
-                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{item.unit}</p>
                     <p className="text-lg font-bold mt-2">{item.price}</p>
                   </div>
                 </div>
@@ -84,24 +79,22 @@ export default function DelicatessenPage() {
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 text-right mt-7">※ 仕入れ状況によっては、メニューが異なる場合があります。</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-8 text-right mt-7">
+              ※ 仕入れ状況によっては、メニューが異なる場合があります。
+            </p>
           </div>
         </section>
 
         <section className="py-14 px-4">
           <div className="max-w-3xl m-auto">
-            <h2 className="text-xl font-bold font-serif text-center mb-4">
-              イートイン
-            </h2>
+            <h2 className="text-xl font-bold font-serif text-center mb-4">イートイン</h2>
             <p className="md:text-center text-gray-800 dark:text-gray-100 leading-[1.7] mb-8">
               店内でもお惣菜お召し上がりいただける他、イートインでしか提供していないメニューもございます。
               <br />
               週替わりのメニューは月曜日に公式LINEやInstagramでお知らせしております。
             </p>
 
-            <h3 className="text-lg font-bold font-serif mb-4">
-              イートインメニュー
-            </h3>
+            <h3 className="text-lg font-bold font-serif mb-4">イートインメニュー</h3>
             <ul className="space-y-3 mb-8">
               {eatInMenuItems.map((item) => (
                 <li
@@ -136,7 +129,9 @@ export default function DelicatessenPage() {
             </div>
 
             <h3 className="text-lg font-bold font-serif mb-4">ドリンクリスト</h3>
-            <p className="mb-6">ワインのほか、日本酒やノンアルコールドリンクもご用意しております。</p>
+            <p className="mb-6">
+              ワインのほか、日本酒やノンアルコールドリンクもご用意しております。
+            </p>
             <a
               href="https://winecode.app/panier"
               target="_blank"
