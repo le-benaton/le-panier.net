@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/app/header";
+import { weeklyPasta, dailyMenuItems, dailySetPrice, stewSet } from "@/data/lunch";
 
 export const metadata: Metadata = {
   title: "デリカテッセン｜ル パニエ - 西宮・夙川のフレンチ惣菜",
@@ -93,6 +94,49 @@ export default function DelicatessenPage() {
               <br />
               週替わりのメニューは月曜日に公式LINEやInstagramでお知らせしております。
             </p>
+
+            <h3 className="text-lg font-bold font-serif mb-4">週替わりパスタ</h3>
+            <div className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow mb-8 max-w-sm">
+              <div className="aspect-video relative">
+                <Image
+                  src={weeklyPasta.image}
+                  alt={weeklyPasta.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold font-serif">{weeklyPasta.name}</h4>
+                <p className="text-lg font-bold mt-2">{weeklyPasta.price}</p>
+              </div>
+            </div>
+
+            <h3 className="text-lg font-bold font-serif mb-4">日替わりセット</h3>
+            <ul className="space-y-3 mb-2">
+              {dailyMenuItems.map((item) => (
+                <li key={item.day} className="flex items-baseline text-gray-800 dark:text-gray-100">
+                  <span className="text-sm text-gray-500 dark:text-gray-400 w-8 shrink-0">
+                    {item.day}
+                  </span>
+                  <span>{item.name}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-lg font-bold mb-8 text-right">{dailySetPrice}</p>
+
+            <h3 className="text-lg font-bold font-serif mb-4">煮込みセット</h3>
+            <p className="text-gray-800 dark:text-gray-100 mb-2">{stewSet.name}</p>
+            <p className="text-lg font-bold mb-8 text-right">{stewSet.price}</p>
+
+            <div className="bg-stone-100 dark:bg-stone-800 rounded-lg p-4 mb-10">
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                ＋600円でセットに変更できます。セットには、惣菜3品、パン、ドリンクが含まれます。
+                <br />
+                追加料金でドリンクの変更や前菜盛り合わせを5種への変更も可能です。
+                <br />
+                11時〜21時までご提供しております。
+              </p>
+            </div>
 
             <h3 className="text-lg font-bold font-serif mb-4">イートインメニュー</h3>
             <ul className="space-y-3 mb-8">
