@@ -51,7 +51,7 @@ export default function DelicatessenPage() {
               {regularMenuItems.map((item) => (
                 <div
                   key={item.name}
-                  className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow"
+                  className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow-sm"
                 >
                   <div className="aspect-video relative">
                     <Image src={item.image} alt={item.name} fill className="object-cover" />
@@ -65,9 +65,9 @@ export default function DelicatessenPage() {
               ))}
             </div>
             <ul className="max-w-3xl m-auto space-y-3">
-              {recommendedMenuItems.map((item) => (
+              {recommendedMenuItems.map((item, index) => (
                 <li
-                  key={item.name}
+                  key={index}
                   className="flex justify-between items-baseline text-gray-800 dark:text-gray-100"
                 >
                   <span>
@@ -96,7 +96,7 @@ export default function DelicatessenPage() {
             </p>
 
             <h3 className="text-lg font-bold font-serif mb-4">週替わりパスタ</h3>
-            <div className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow mb-8 max-w-sm">
+            <div className="bg-white dark:bg-neutral-800 rounded-lg overflow-hidden shadow-sm mb-8 max-w-sm">
               <div className="aspect-video relative">
                 <Image
                   src={weeklyPasta.image}
@@ -140,9 +140,9 @@ export default function DelicatessenPage() {
 
             <h3 className="text-lg font-bold font-serif mb-4">イートインメニュー</h3>
             <ul className="space-y-3 mb-8">
-              {eatInMenuItems.map((item) => (
+              {eatInMenuItems.map((item, index) => (
                 <li
-                  key={item.name}
+                  key={index}
                   className="flex justify-between items-baseline text-gray-800 dark:text-gray-100"
                 >
                   <span>

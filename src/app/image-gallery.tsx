@@ -16,7 +16,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
     <section className="px-4 max-w-5xl mx-auto py-14">
       <h2 className="text-2xl font-serif text-center mb-8">ギャラリー</h2>
 
-      <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
+      <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
         {images.map((src, index) => (
           <Image
             key={src}

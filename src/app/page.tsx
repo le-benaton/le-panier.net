@@ -22,7 +22,7 @@ export default function Home() {
       <SelectDialog />
       <Header isTopPage />
       <main>
-        <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/[.15]">
+        <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/15">
           <Image
             className="object-cover"
             src="/images/mv.jpg"
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="flex flex-col max-w-3xl m-auto">
             <div className="-m-1.5 overflow-x-auto">
               <div className="p-1.5 min-w-full inline-block align-middle">
-                <div className="border rounded-lg shadow">
+                <div className="border rounded-lg shadow-sm">
                   <table className="min-w-full divide-y divide-gray-200">
                     <tbody className="divide-y divide-gray-200">
                       <tr className=" text-gray-800 dark:text-gray-200">
@@ -213,7 +213,7 @@ export default function Home() {
 
         <ImageGallery images={galleryImages} />
 
-        <div className="flex overflow-scroll bg-black/[.15]">
+        <div className="flex overflow-scroll bg-black/15">
           <Image
             className="w-auto max-w-none h-72"
             src="/images/drawing_2.svg"
