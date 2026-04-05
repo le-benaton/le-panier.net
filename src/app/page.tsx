@@ -34,104 +34,17 @@ export default function Home() {
         </div>
 
         <div className="p-5 pt-8 pb-12">
-          <h2 className="text-center text-2xl font-serif mt-8">
-            美味しい食とお酒を日常に。
-            <br />
-            西宮市夙川に、2025年3月21日(金)オープン。
-          </h2>
-          <p className="text-center m-6 text-gray-500 dark:text-gray-400">
-            <a href="https://benaton.net/" target="_blank" className="underline">
+          <h2 className="text-center text-2xl font-serif mt-8">美味しい食とお酒を日常に。</h2>
+          <p className="md:text-center my-6 mx-3 leading-relaxed">
+            <a href="https://benaton.net/" target="_blank" className="underline text-blue-500">
               「ル ベナトン」
             </a>
-            の高谷慶が手掛ける、 “日常の美味しい”
+            の味を、ご自宅の食卓にも。
+            <br />
+            フレンチシェフが手がけるお惣菜をお持ち帰りいただけます。
+            <br />
+            店内のカウンターでは、ランチやお酒もご用意しています。
           </p>
-          <div className="flex flex-col max-w-3xl m-auto">
-            <div className="-m-1.5 overflow-x-auto">
-              <div className="p-1.5 min-w-full inline-block align-middle">
-                <div className="border rounded-lg shadow-sm">
-                  <table className="min-w-full divide-y divide-gray-200">
-                    <tbody className="divide-y divide-gray-200">
-                      <tr className=" text-gray-800 dark:text-gray-200">
-                        <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">店舗名</th>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm ">
-                          le panier （ル パニエ）
-                        </td>
-                      </tr>
-
-                      <tr className=" text-gray-800 dark:text-gray-200">
-                        <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">住所</th>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">
-                          兵庫県西宮市千歳町6番16号（
-                          <a
-                            href="https://maps.app.goo.gl/qibejWXogWvvwiks8"
-                            target="_blank"
-                            className="underline text-blue-500"
-                          >
-                            Google Map
-                          </a>
-                          ）
-                        </td>
-                      </tr>
-
-                      <tr className=" text-gray-800 dark:text-gray-200">
-                        <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          営業時間
-                        </th>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">
-                          11時〜21時
-                          <br />
-                          金・土のみ11時〜24時
-                        </td>
-                      </tr>
-
-                      <tr className=" text-gray-800 dark:text-gray-200">
-                        <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">定休日</th>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">水曜日</td>
-                      </tr>
-
-                      <tr className=" text-gray-800 dark:text-gray-200">
-                        <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          Instagram
-                        </th>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">
-                          <a
-                            href="https://www.instagram.com/le_panier_benaton/"
-                            target="_blank"
-                            className=" text-blue-500"
-                          >
-                            @le_panier_benaton
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr className=" text-gray-800 dark:text-gray-200">
-                        <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                          予約・お問合せ
-                        </th>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm">
-                          <a
-                            href="https://lin.ee/h2BUTwy"
-                            target="_blank"
-                            className="text-blue-500 underline"
-                          >
-                            LINE公式アカウント
-                          </a>{" "}
-                          または{" "}
-                          <a
-                            href="https://www.hotpepper.jp/strJ004469357/yoyaku/?vos=othpporgzzzzx00000001"
-                            target="_blank"
-                            className=" text-blue-500 underline"
-                          >
-                            ホットペッパー
-                          </a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="bg-stone-100 dark:bg-stone-900 py-14">
@@ -213,33 +126,6 @@ export default function Home() {
 
         <ImageGallery images={galleryImages} />
 
-        <div className="flex overflow-scroll bg-black/15">
-          <Image
-            className="w-auto max-w-none h-72"
-            src="/images/drawing_2.svg"
-            alt="le panier drawing_1"
-            width={1523}
-            height={634}
-            priority
-          />
-          <Image
-            className="w-auto max-w-none h-72 m-2"
-            src="/images/drawing_1.svg"
-            alt="le panier drawing_1"
-            width={1362}
-            height={608}
-            priority
-          />
-          <Image
-            className="w-auto max-w-none h-72 m-2"
-            src="/images/drawing_3.svg"
-            alt="le panier drawing_1"
-            width={1642}
-            height={592}
-            priority
-          />
-        </div>
-
         <div className="grid md:grid-cols-2">
           <div className="h-72 md:h-auto md:min-h-96">
             <iframe
@@ -268,11 +154,35 @@ export default function Home() {
                     Google Map
                   </a>
                   ）
+                  <br />
+                  JRさくら夙川駅・阪急夙川駅から徒歩5分
                 </dd>
               </div>
               <div>
                 <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">営業時間</dt>
-                <dd className="mt-1">11:00～22:00</dd>
+                <dd className="mt-1">
+                  11時〜21時
+                  <br />
+                  金・土のみ11時〜24時
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">定休日</dt>
+                <dd className="mt-1">水曜日</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">駐車場</dt>
+                <dd className="mt-1">
+                  駐車場はございませんが、近くにコインパーキングがございます（
+                  <a
+                    href="https://times-info.net/P28-hyogo/C204/park-detail-BUK0025568/"
+                    target="_blank"
+                    className="underline text-blue-500"
+                  >
+                    タイムズ西宮千歳町
+                  </a>
+                  ）
+                </dd>
               </div>
               <div>
                 <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Instagram</dt>
@@ -280,7 +190,7 @@ export default function Home() {
                   <a
                     href="https://www.instagram.com/le_panier_benaton/"
                     target="_blank"
-                    className="text-blue-500"
+                    className="text-blue-500 underline"
                   >
                     @le_panier_benaton
                   </a>
@@ -291,8 +201,20 @@ export default function Home() {
                   予約・お問合せ
                 </dt>
                 <dd className="mt-1">
-                  <a href="https://lin.ee/h2BUTwy" target="_blank" className="text-blue-500">
+                  <a
+                    href="https://lin.ee/h2BUTwy"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
                     LINE公式アカウント
+                  </a>{" "}
+                  または{" "}
+                  <a
+                    href="https://www.hotpepper.jp/strJ004469357/yoyaku/?vos=othpporgzzzzx00000001"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    ホットペッパー
                   </a>
                 </dd>
               </div>
