@@ -77,41 +77,6 @@ export default function Home() {
                 </ul>
               </FeatureSection>
               <FeatureSection
-                imageSrc="/images/colum-event.jpg"
-                imageAlt="イベントの写真"
-                title="イベント会場としてのご利用"
-                imageObjectPosition="object-center"
-              >
-                <p className="mt-1">
-                  プロジェクター完備の店内は、イベントスペースとしてもご利用いただけます。
-                  <br />
-                  ご予約・ご相談は公式LINEまたはInstagram DMから受け付けております。
-                </p>
-                <p className="mt-3">
-                  お店主催のイベントも不定期で開催しております。
-                  <a
-                    href="https://www.instagram.com/le_panier_benaton/"
-                    target="_blank"
-                    className="text-blue-500 underline"
-                  >
-                    最新情報はInstagramをご覧ください
-                  </a>
-                  。
-                </p>
-              </FeatureSection>
-              <FeatureSection
-                imageSrc="/images/colum-vegetables.jpg"
-                imageAlt="野菜販売の様子"
-                title="野菜販売"
-                imageObjectPosition="object-center"
-              >
-                <p className="mt-1">
-                  週末の早朝に、シェフが加東市や三田市の道の駅まで足を運び、自分の目で選んだ旬の野菜を店先のワゴンで販売しています。
-                  <br />
-                  減農薬栽培を大切にする「よつばファーム」さんのお野菜も毎週届きます。季節によってはシェフ自家栽培のキウイや柚子、大根がお目見えすることも。
-                </p>
-              </FeatureSection>
-              <FeatureSection
                 imageSrc="/images/colum-restaurant.jpeg"
                 imageAlt="店内のカウンター席"
                 title="店内でのお食事・お酒"
@@ -121,7 +86,7 @@ export default function Home() {
                   カウンター席では、日替わりや週替わりのお食事メニュー、モーニングなどをご用意しています。
                 </p>
                 <p className="mt-4">
-                  日替わり・週替わりメニューやモーニングの最新情報は、
+                  日替わり・週替わりメニューの内容やモーニング営業の最新情報は、
                   <a
                     href="https://lin.ee/h2BUTwy"
                     target="_blank"
@@ -150,6 +115,41 @@ export default function Home() {
                     ワイン・ドリンクリストを見る
                   </a>
                 </div>
+              </FeatureSection>
+              <FeatureSection
+                imageSrc="/images/colum-vegetables.jpg"
+                imageAlt="野菜販売の様子"
+                title="野菜販売"
+                imageObjectPosition="object-center"
+              >
+                <p className="mt-1">
+                  週末の早朝に、シェフが加東市や三田市の道の駅まで足を運び、自分の目で選んだ旬の野菜を店先のワゴンで販売しています。
+                  <br />
+                  減農薬栽培を大切にする「よつばファーム」さんのお野菜も毎週届きます。季節によってはシェフ自家栽培のキウイや柚子、大根がお目見えすることも。
+                </p>
+              </FeatureSection>
+              <FeatureSection
+                imageSrc="/images/colum-event.jpg"
+                imageAlt="イベントの写真"
+                title="イベント会場としてのご利用"
+                imageObjectPosition="object-center"
+              >
+                <p className="mt-1">
+                  プロジェクター完備の店内は、イベントスペースとしてもご利用いただけます。
+                  <br />
+                  ご予約・ご相談は公式LINEまたはInstagram DMから受け付けております。
+                </p>
+                <p className="mt-3">
+                  お店主催のイベントも不定期で開催しております。
+                  <a
+                    href="https://www.instagram.com/le_panier_benaton/"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    最新情報はInstagramをご覧ください
+                  </a>
+                  。
+                </p>
               </FeatureSection>
             </div>
           </section>
