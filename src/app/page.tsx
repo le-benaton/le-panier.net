@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
-import Link from "next/link";
 import Header from "@/app/header";
 import FeatureSection from "@/app/feature-section";
 import SelectDialog from "@/app/select-dialog";
@@ -68,7 +67,7 @@ export default function Home() {
                   </a>
                   」から生まれたデリカテッセン。
                   <br />
-                  シェフが手掛けるフレンチ惣菜を、テイクアウトでお届けします。日替わり・週替わりメニューもご用意しています。
+                  シェフが手掛けるフレンチ惣菜を、テイクアウトでお届けします。日によって並ぶメニューが変わります。
                 </p>
                 <h4 className="text-lg font-bold font-serif mt-4 mb-1">販売しているお惣菜の一例</h4>
                 <ul className="list-disc ml-5">
@@ -76,14 +75,6 @@ export default function Home() {
                   <li>砂肝のコンフィ(100g) / 500円</li>
                   <li>ローストビーフ(1g) / 10円</li>
                 </ul>
-                <div className="mt-4">
-                  <Link
-                    href="/delicatessen"
-                    className="inline-block px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300"
-                  >
-                    メニューを見る
-                  </Link>
-                </div>
               </FeatureSection>
               <FeatureSection
                 imageSrc="/images/colum-event.jpg"
@@ -119,6 +110,46 @@ export default function Home() {
                   <br />
                   減農薬栽培を大切にする「よつばファーム」さんのお野菜も毎週届きます。季節によってはシェフ自家栽培のキウイや柚子、大根がお目見えすることも。
                 </p>
+              </FeatureSection>
+              <FeatureSection
+                imageSrc="/images/colum-restaurant.jpeg"
+                imageAlt="店内のカウンター席"
+                title="店内でのお食事・お酒"
+                imageObjectPosition="object-center"
+              >
+                <p className="mt-1">
+                  カウンター席では、日替わりや週替わりのお食事メニュー、モーニングなどをご用意しています。
+                </p>
+                <p className="mt-4">
+                  日替わり・週替わりメニューやモーニングの最新情報は、
+                  <a
+                    href="https://lin.ee/h2BUTwy"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    公式LINE
+                  </a>
+                  または
+                  <a
+                    href="https://www.instagram.com/le_panier_benaton/"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    Instagram
+                  </a>
+                  でお知らせしております。
+                </p>
+                <h4 className="text-lg font-bold font-serif mt-6 mb-1">ドリンクリスト</h4>
+                <p>ワインのほか、日本酒やノンアルコールドリンクもご用意しております。</p>
+                <div className="mt-4">
+                  <a
+                    href="https://winecode.app/panier"
+                    target="_blank"
+                    className="inline-block px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300"
+                  >
+                    ワイン・ドリンクリストを見る
+                  </a>
+                </div>
               </FeatureSection>
             </div>
           </section>
