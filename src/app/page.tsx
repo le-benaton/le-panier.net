@@ -239,14 +239,6 @@ export default function Home() {
                   >
                     LINE公式アカウント
                   </a>{" "}
-                  または{" "}
-                  <a
-                    href="https://www.hotpepper.jp/strJ004469357/yoyaku/?vos=othpporgzzzzx00000001"
-                    target="_blank"
-                    className="text-blue-500 underline"
-                  >
-                    ホットペッパー
-                  </a>
                 </dd>
               </div>
             </dl>
