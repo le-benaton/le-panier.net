@@ -5,6 +5,7 @@ import Header from "@/app/header";
 import FeatureSection from "@/app/feature-section";
 import SelectDialog from "@/app/select-dialog";
 import ImageGallery from "@/app/image-gallery";
+import InstagramCta from "@/app/instagram-cta";
 
 const galleryDir = path.join(process.cwd(), "public/images/gallery");
 const galleryImages = fs.existsSync(galleryDir)
@@ -155,7 +156,25 @@ export default function Home() {
           </section>
         </div>
 
+        <div className="py-14">
+          <section className="px-4 max-w-7xl m-auto">
+            <h2 className="text-2xl font-serif text-center mb-8">
+              今週の週替わり・日替わりメニュー
+            </h2>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+            <p>ここに週替わり・日替わりのメニューをいれます</p>
+          </section>
+        </div>
+
         <ImageGallery images={galleryImages} />
+
+        <InstagramCta />
 
         <div className="grid md:grid-cols-2">
           <div className="h-72 md:h-auto md:min-h-96">

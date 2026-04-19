@@ -54,21 +54,6 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           </button>
         ))}
       </div>
-
-      <div className="text-center mt-8">
-        <p className="text-gray-500 dark:text-gray-400 mb-4">
-          お店の様子やイベント情報は
-          <br />
-          Instagramでも日々お届けしています
-        </p>
-        <a
-          href="https://www.instagram.com/le_panier_benaton/"
-          target="_blank"
-          className="inline-block px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300"
-        >
-          Instagramを見る
-        </a>
-      </div>
     </section>
   );
 }
