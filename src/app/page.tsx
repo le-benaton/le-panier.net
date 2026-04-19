@@ -1,217 +1,250 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
-import Logo from "@/app/logo";
+import Header from "@/app/header";
+import FeatureSection from "@/app/feature-section";
 import SelectDialog from "@/app/select-dialog";
+import ImageGallery from "@/app/image-gallery";
+
+const galleryDir = path.join(process.cwd(), "public/images/gallery");
+const galleryImages = fs.existsSync(galleryDir)
+  ? fs
+      .readdirSync(galleryDir)
+      .filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+      .sort()
+      .map((file) => `/images/gallery/${file}`)
+  : [];
 
 export default function Home() {
   return (
     <>
       <SelectDialog />
-      <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3 dark:bg-neutral-800">
-        <nav className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
-          <div className="flex items-center justify-between">
-            <a
-              className="flex-none text-xl font-semibold dark:text-white focus:outline-none focus:opacity-80"
-              href="#"
-              aria-label="Brand"
-            >
-              <span className="inline-flex items-center gap-x-2 text-xl font-semibold dark:text-white">
-                <Logo className="w-40 h-auto fill-black dark:fill-gray-50" />
-              </span>
+      <Header isTopPage />
+      <main>
+        <div className="relative w-full aspect-video max-h-[800px] overflow-hidden bg-black/15">
+          <Image
+            className="object-cover"
+            src="/images/mv.jpg"
+            alt="le panier の外観写真"
+            fill
+            sizes="100vw"
+            priority
+          />
+        </div>
+
+        <div className="p-5 pt-8 pb-12">
+          <h2 className="text-center text-2xl font-serif mt-8">美味しい食とお酒を日常に。</h2>
+          <p className="md:text-center my-6 mx-3 leading-relaxed">
+            <a href="https://benaton.net/" target="_blank" className="underline text-blue-500">
+              「ル ベナトン」
             </a>
-          </div>
-        </nav>
-      </header>
-      <div className="flex overflow-scroll bg-black/[.15]">
-        <Image
-          className="w-auto max-w-none h-72"
-          src="/images/perspective_1.png"
-          alt="le panier perspective_1"
-          width={1523}
-          height={634}
-          priority
-        />
-        <Image
-          className="w-auto max-w-none h-72"
-          src="/images/perspective_2.png"
-          alt="le panier perspective_2"
-          width={1362}
-          height={608}
-          priority
-        />
-        <Image
-          className="w-auto max-w-none h-72"
-          src="/images/perspective_3.png"
-          alt="le panier perspective_3"
-          width={1642}
-          height={592}
-          priority
-        />
-      </div>
+            の味を、ご自宅の食卓にも。
+            <br />
+            フレンチシェフが手がけるお惣菜をお持ち帰りいただけます。
+            <br />
+            店内のカウンターでは、ランチやお酒もご用意しています。
+          </p>
+        </div>
 
-      <div className="p-5 pt-8 pb-12">
-        <h2 className="text-center text-2xl font-serif mt-8">
-          美味しい食とお酒を日常に。
-          <br />
-          西宮市夙川に、2025年3月21日(金)オープン。
-        </h2>
-        <h3 className="text-center m-6 text-gray-500 dark:text-gray-400">
-          <a href="https://benaton.net/" target="_blank" className="underline">
-            「ル ベナトン」
-          </a>
-          の高谷慶が手掛ける、 “日常の美味しい”
-        </h3>
-        <div className="flex flex-col max-w-3xl m-auto">
-          <div className="-m-1.5 overflow-x-auto">
-            <div className="p-1.5 min-w-full inline-block align-middle">
-              <div className="border rounded-lg shadow">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <tbody className="divide-y divide-gray-200">
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">店舗名</th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm ">
-                        le panier （ル パニエ）
-                      </td>
-                    </tr>
-
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">住所</th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm">
-                        兵庫県西宮市千歳町6番16号（
-                        <a
-                          href="https://maps.app.goo.gl/qibejWXogWvvwiks8"
-                          target="_blank"
-                          className="underline text-blue-500"
-                        >
-                          Google Map
-                        </a>
-                        ）
-                      </td>
-                    </tr>
-
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">営業時間</th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm">11:00～22:00</td>
-                    </tr>
-
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">Instagram</th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm">
-                        <a
-                          href="https://www.instagram.com/le_panier_benaton/"
-                          target="_blank"
-                          className=" text-blue-500"
-                        >
-                          @le_panier_benaton
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr className=" text-gray-800 dark:text-gray-200">
-                      <th className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        予約・お問合せ
-                      </th>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500">
-                        <a
-                          href="https://lin.ee/h2BUTwy"
-                          target="_blank"
-                          style={{ display: "block !important" }}
-                        >
-                          LINE公式アカウント
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+        <div className="bg-stone-100 dark:bg-stone-900 py-14">
+          <section className="px-4 max-w-7xl m-auto">
+            <h2 className="text-2xl font-serif text-center mb-8">le panier のサービス</h2>
+            <div className="space-y-12">
+              <FeatureSection
+                imageSrc="/images/colum-delica.jpg"
+                imageAlt="デリカテッセンの料理"
+                title="デリカテッセン（惣菜販売）"
+                imageObjectPosition="object-bottom"
+              >
+                <p className="mt-1">
+                  フレンチレストラン「
+                  <a
+                    href="https://benaton.net/"
+                    target="_blank"
+                    className="underline text-blue-500"
+                  >
+                    ル ベナトン
+                  </a>
+                  」から生まれたデリカテッセン。
+                  <br />
+                  シェフが手掛けるフレンチ惣菜を、テイクアウトでお届けします。日によって並ぶメニューが変わります。
+                </p>
+                <h4 className="text-lg font-bold font-serif mt-4 mb-1">販売しているお惣菜の一例</h4>
+                <ul className="list-disc ml-5">
+                  <li>ラザニア(1切れ) / 950円</li>
+                  <li>砂肝のコンフィ(100g) / 500円</li>
+                  <li>ローストビーフ(1g) / 10円</li>
+                </ul>
+              </FeatureSection>
+              <FeatureSection
+                imageSrc="/images/colum-restaurant.jpeg"
+                imageAlt="店内のカウンター席"
+                title="店内でのお食事・お酒"
+                imageObjectPosition="object-center"
+              >
+                <p className="mt-1">
+                  カウンター席では、日替わりや週替わりのお食事メニュー、モーニングなどをご用意しています。
+                </p>
+                <p className="mt-4">
+                  日替わり・週替わりメニューの内容やモーニング営業の最新情報は、
+                  <a
+                    href="https://lin.ee/h2BUTwy"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    公式LINE
+                  </a>
+                  または
+                  <a
+                    href="https://www.instagram.com/le_panier_benaton/"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    Instagram
+                  </a>
+                  でお知らせしております。
+                </p>
+                <h4 className="text-lg font-bold font-serif mt-6 mb-1">ドリンクリスト</h4>
+                <p>ワインのほか、日本酒やノンアルコールドリンクもご用意しております。</p>
+                <div className="mt-4">
+                  <a
+                    href="https://winecode.app/panier"
+                    target="_blank"
+                    className="inline-block px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300"
+                  >
+                    ワイン・ドリンクリストを見る
+                  </a>
+                </div>
+              </FeatureSection>
+              <FeatureSection
+                imageSrc="/images/colum-vegetables.jpg"
+                imageAlt="野菜販売の様子"
+                title="野菜販売"
+                imageObjectPosition="object-center"
+              >
+                <p className="mt-1">
+                  週末の早朝に、シェフが加東市や三田市の道の駅まで足を運び、自分の目で選んだ旬の野菜を店先のワゴンで販売しています。
+                  <br />
+                  減農薬栽培を大切にする「よつばファーム」さんのお野菜も毎週届きます。季節によってはシェフ自家栽培のキウイや柚子、大根がお目見えすることも。
+                </p>
+              </FeatureSection>
+              <FeatureSection
+                imageSrc="/images/colum-event.jpg"
+                imageAlt="イベントの写真"
+                title="イベント会場としてのご利用"
+                imageObjectPosition="object-center"
+              >
+                <p className="mt-1">
+                  プロジェクター完備の店内は、イベントスペースとしてもご利用いただけます。
+                  <br />
+                  ご予約・ご相談は公式LINEまたはInstagram DMから受け付けております。
+                </p>
+                <p className="mt-3">
+                  お店主催のイベントも不定期で開催しております。
+                  <a
+                    href="https://www.instagram.com/le_panier_benaton/"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    最新情報はInstagramをご覧ください
+                  </a>
+                  。
+                </p>
+              </FeatureSection>
             </div>
-          </div>
+          </section>
         </div>
-      </div>
 
-      <div className="md:flex justify-between pt-8 pb-8 max-w-7xl m-auto">
-        <div className="md:w-1/3 flex flex-col bg-white dark:bg-gray-950 border shadow-sm dark:border-gray-700 rounded-xl m-3 overflow-hidden">
-          <Image
-            className="w-auto max-w-none h-44 object-cover"
-            src="/images/colum-delica.jpeg"
-            alt="le panier perspective_1"
-            width={1523}
-            height={634}
-            priority
-          />
-          <div className="p-4 md:p-5 text-gray-800 dark:text-gray-100">
-            <h3 className="text-lg font-bold">デリカテッセン</h3>
-            <p className="mt-1">
-              毎日の食卓に、ちょっとした楽しさと喜びをお届けするため、旬の食材をふんだんに使った料理を日替わり週替りでご用意いたします。
-            </p>
-            <p className="mt-3">
-              お忙しい日々の中でも、心温まる味わいでほっと一息つけるような、そんな持ち帰りお惣菜をご提供します。
-            </p>
-          </div>
-        </div>
-        <div className="md:w-1/3 flex flex-col bg-white dark:bg-gray-950 border shadow-sm dark:border-gray-700 rounded-xl m-3 overflow-hidden">
-          <Image
-            className="w-auto max-w-none h-44 object-cover"
-            src="/images/colum-restaurant.jpeg"
-            alt="le panier perspective_1"
-            width={1523}
-            height={634}
-            priority
-          />
-          <div className="p-4 md:p-5 text-gray-800 dark:text-gray-100">
-            <h3 className="text-lg font-bold">レストラン、バー</h3>
-            <p className="mt-1">
-              お惣菜は店内でもお楽しみいただけるほか、お店でしか味わえない特別なメニューもご用意しています。
-            </p>
-            <p className="mt-3">
-              最大10席のカウンターバーで、おすすめのカフェやワインと共に、お料理をお楽しみいただけます。
-            </p>
-          </div>
-        </div>
-        <div className="md:w-1/3 flex flex-col bg-white dark:bg-gray-950 border shadow-sm dark:border-gray-700 rounded-xl m-3 overflow-hidden">
-          <Image
-            className="w-auto max-w-none h-44 object-cover"
-            src="/images/colum-event.jpg"
-            alt="le panier perspective_1"
-            width={1523}
-            height={634}
-            priority
-          />
-          <div className="p-4 md:p-5 text-gray-800 dark:text-gray-100">
-            <h3 className="text-lg font-bold">イベント</h3>
-            <p className="mt-1">
-              季節のイベントやコラボイベントを開催予定。ワインの飲み比べや、音楽を聞かせて熟成させた日本酒、また生産者を招いてのテイスティングイベントに興味はありませんか？
-            </p>
-            <p className="mt-3">少人数だからこそできる体験を、ぜひお楽しみください。</p>
-          </div>
-        </div>
-      </div>
+        <ImageGallery images={galleryImages} />
 
-      <div className="flex overflow-scroll bg-black/[.15]">
-        <Image
-          className="w-auto max-w-none h-72"
-          src="/images/drawing_2.svg"
-          alt="le panier drawing_1"
-          width={1523}
-          height={634}
-          priority
-        />
-        <Image
-          className="w-auto max-w-none h-72 m-2"
-          src="/images/drawing_1.svg"
-          alt="le panier drawing_1"
-          width={1362}
-          height={608}
-          priority
-        />
-        <Image
-          className="w-auto max-w-none h-72 m-2"
-          src="/images/drawing_3.svg"
-          alt="le panier drawing_1"
-          width={1642}
-          height={592}
-          priority
-        />
-      </div>
+        <div className="grid md:grid-cols-2">
+          <div className="h-72 md:h-auto md:min-h-96">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.5688371055335!2d135.3279881127118!3d34.74126097279224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f3a2c059a473%3A0x9e92f9a9e8539a22!2zbGUgcGFuaWVyICjjg6sg44OR44OL44KoKSDlpJnlt53lupc!5e0!3m2!1sja!2sjp!4v1772196418618!5m2!1sja!2sjp"
+              className="w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div className="p-5 md:p-12 text-gray-800 dark:text-gray-200">
+            <dl className="space-y-4">
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">店舗名</dt>
+                <dd className="mt-1">le panier （ル パニエ）</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">住所</dt>
+                <dd className="mt-1">
+                  兵庫県西宮市千歳町6番16号（
+                  <a
+                    href="https://maps.app.goo.gl/qibejWXogWvvwiks8"
+                    target="_blank"
+                    className="underline text-blue-500"
+                  >
+                    Google Map
+                  </a>
+                  ）
+                  <br />
+                  JRさくら夙川駅・阪急夙川駅から徒歩5分
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">営業時間</dt>
+                <dd className="mt-1">
+                  11時〜21時
+                  <br />
+                  金・土のみ11時〜24時
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">定休日</dt>
+                <dd className="mt-1">水曜日</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">駐車場</dt>
+                <dd className="mt-1">
+                  駐車場はございませんが、近くにコインパーキングがございます（
+                  <a
+                    href="https://times-info.net/P28-hyogo/C204/park-detail-BUK0025568/"
+                    target="_blank"
+                    className="underline text-blue-500"
+                  >
+                    タイムズ西宮千歳町
+                  </a>
+                  ）
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Instagram</dt>
+                <dd className="mt-1">
+                  <a
+                    href="https://www.instagram.com/le_panier_benaton/"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    @le_panier_benaton
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                  予約・お問合せ
+                </dt>
+                <dd className="mt-1">
+                  <a
+                    href="https://lin.ee/h2BUTwy"
+                    target="_blank"
+                    className="text-blue-500 underline"
+                  >
+                    LINE公式アカウント
+                  </a>{" "}
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </main>
     </>
   );
 }
