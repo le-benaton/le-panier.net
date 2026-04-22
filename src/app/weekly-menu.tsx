@@ -76,16 +76,15 @@ export default function WeeklyMenu() {
               </div>
             </div>
 
-            <ul className="list-none p-0 m-0 border-t border-black/[0.14] dark:border-white/[0.14]">
+            <ul className="grid grid-cols-[auto_1fr] list-none p-0 m-0 border-t border-black/[0.14] dark:border-white/[0.14]">
               {DAILY_MENU.map((entry) => (
-                <li
-                  key={entry.weekday}
-                  className="flex items-baseline gap-[14px] md:gap-5 py-3 md:py-3.5 border-b border-black/[0.14] dark:border-white/[0.14]"
-                >
-                  <div className="w-7 md:w-9 flex-shrink-0 self-stretch flex items-center justify-center border-r border-black/[0.14] dark:border-white/[0.14] pr-3 md:pr-4 font-serif text-sm md:text-base">
+                <li key={entry.weekday} className="contents">
+                  <div className="flex items-center justify-center px-3 md:px-4 py-3 md:py-3.5 border-r border-b border-black/[0.14] dark:border-white/[0.14] font-serif text-sm md:text-base whitespace-nowrap">
                     {entry.weekday}
                   </div>
-                  <div className="flex-1 text-sm leading-[1.6]">{entry.item}</div>
+                  <div className="flex items-center pl-[14px] md:pl-5 py-3 md:py-3.5 border-b border-black/[0.14] dark:border-white/[0.14] text-sm leading-[1.6]">
+                    {entry.item}
+                  </div>
                 </li>
               ))}
             </ul>
