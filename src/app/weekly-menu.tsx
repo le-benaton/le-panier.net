@@ -1,3 +1,5 @@
+import SectionHeading from "@/app/section-heading";
+
 type MenuItem = {
   name: string;
   price: { sell: string };
@@ -68,15 +70,7 @@ export default async function WeeklyMenu() {
   return (
     <section className="border-y border-black/[0.08] dark:border-white/[0.07] bg-[#fbf9f5] dark:bg-[#141821] text-[#111] dark:text-[#f1efe9] px-6 pt-14 pb-16 md:px-10 md:pt-[104px] md:pb-28">
       <div className="max-w-[920px] mx-auto">
-        <div className="text-center mb-7 md:mb-12">
-          <div className="w-px h-7 md:h-11 bg-[#6b6b6b] dark:bg-[#8a8a8a] opacity-45 mx-auto mb-[18px] md:mb-[26px]" />
-          <div className="font-mono text-xs tracking-[4px] uppercase text-[#6b6b6b] dark:text-[#8a8a8a] mb-[14px] md:mb-5">
-            Weekly &amp; Daily Menu
-          </div>
-          <h2 className="font-serif text-2xl md:text-3xl leading-[1.5] tracking-[0.3px] text-[#1a2240] dark:text-[#e8e4d9] font-normal">
-            週替わり・日替わりメニュー
-          </h2>
-        </div>
+        <SectionHeading en="Weekly & Daily Menu" jp="週替わり・日替わりメニュー" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[72px] mt-3 md:mt-8 items-start">
           <div className="flex flex-col gap-9 md:gap-14">

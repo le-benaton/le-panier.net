@@ -7,6 +7,7 @@ import SelectDialog from "@/app/select-dialog";
 import ImageGallery from "@/app/image-gallery";
 import InstagramCta from "@/app/instagram-cta";
 import WeeklyMenu from "@/app/weekly-menu";
+import SectionHeading from "@/app/section-heading";
 
 const galleryDir = path.join(process.cwd(), "public/images/gallery");
 const galleryImages = fs.existsSync(galleryDir)
@@ -48,10 +49,10 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="bg-stone-100 dark:bg-stone-900 py-14">
+        <div className="bg-stone-100 dark:bg-stone-900 pt-14 pb-16 md:pt-[104px] md:pb-28">
           <section className="px-4 max-w-7xl m-auto">
-            <h2 className="text-2xl font-serif text-center mb-8">le panier のサービス</h2>
-            <div className="space-y-12">
+            <SectionHeading en="Our Services" jp="le panier のサービス" />
+            <div className="space-y-16 md:space-y-24">
               <FeatureSection
                 imageSrc="/images/colum-delica.jpg"
                 imageAlt="デリカテッセンの料理"

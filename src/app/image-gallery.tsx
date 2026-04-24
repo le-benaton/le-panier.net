@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import SectionHeading from "@/app/section-heading";
 
 type ImageGalleryProps = {
   images: string[];
@@ -13,8 +14,8 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   if (images.length === 0) return null;
 
   return (
-    <section className="px-4 max-w-5xl mx-auto py-14">
-      <h2 className="text-2xl font-serif text-center mb-8">ギャラリー</h2>
+    <section className="px-4 max-w-5xl mx-auto pt-14 pb-16 md:pt-[104px] md:pb-28">
+      <SectionHeading en="Gallery" jp="ギャラリー" />
 
       <div className="relative w-full aspect-4/3 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-800">
         {images.map((src, index) => (
