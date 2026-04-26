@@ -1,4 +1,5 @@
 import SectionHeading from "@/app/section-heading";
+import { formatYen } from "@/lib/format";
 
 type MenuItem = {
   name: string;
@@ -22,8 +23,6 @@ async function fetchMenu(): Promise<readonly MenuItem[]> {
 }
 
 const hasLabel = (item: MenuItem, label: string) => item.tastingTags.some((t) => t.label === label);
-
-const formatYen = (price: string) => `¥${Number(price).toLocaleString("ja-JP")}`;
 
 function PriceTag({ price }: { price: string }) {
   return (
@@ -68,7 +67,7 @@ export default async function WeeklyMenu() {
   const dailyPrice = dailyItems[0]?.price.sell;
 
   return (
-    <section className="border-y border-black/[0.08] dark:border-white/[0.07] bg-[#fbf9f5] dark:bg-[#141821] text-[#111] dark:text-[#f1efe9] px-6 pt-14 pb-16 md:px-10 md:pt-[104px] md:pb-28">
+    <section className="border-y border-black/[0.08] dark:border-white/[0.07] bg-[#f3ede3] dark:bg-[#1a1814] text-[#111] dark:text-[#f1efe9] px-6 pt-14 pb-16 md:px-10 md:pt-[104px] md:pb-28">
       <div className="max-w-[920px] mx-auto">
         <SectionHeading en="Weekly & Daily Menu" jp="週替わり・日替わりメニュー" />
 
