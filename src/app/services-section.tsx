@@ -46,7 +46,7 @@ const SERVICES: ServiceItem[] = [
     imageObjectPosition: "object-bottom",
     lead: (
       <>
-        フレンチレストラン「<ExternalLink href={BENATON_URL}>ル ベナトン</ExternalLink>
+        「<ExternalLink href={BENATON_URL}>ル ベナトン</ExternalLink>
         」から生まれたデリカテッセン。シェフが手掛けるフレンチ惣菜を、テイクアウトでお届けします。日によって並ぶメニューが変わります。
       </>
     ),
