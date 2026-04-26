@@ -53,7 +53,7 @@ export default function Home() {
                   <a
                     href="https://benaton.net/"
                     target="_blank"
-                    className="underline text-blue-500"
+                    className="underline text-blue-500 dark:text-[#9eb4d8]"
                   >
                     ル ベナトン
                   </a>
@@ -82,7 +82,7 @@ export default function Home() {
                   <a
                     href="https://lin.ee/h2BUTwy"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     公式LINE
                   </a>
@@ -90,7 +90,7 @@ export default function Home() {
                   <a
                     href="https://www.instagram.com/le_panier_benaton/"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     Instagram
                   </a>
@@ -136,7 +136,7 @@ export default function Home() {
                   <a
                     href="https://www.instagram.com/le_panier_benaton/"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     最新情報はInstagramをご覧ください
                   </a>
@@ -176,7 +176,7 @@ export default function Home() {
                   <a
                     href="https://maps.app.goo.gl/qibejWXogWvvwiks8"
                     target="_blank"
-                    className="underline text-blue-500"
+                    className="underline text-blue-500 dark:text-[#9eb4d8]"
                   >
                     Google Map
                   </a>
@@ -204,7 +204,7 @@ export default function Home() {
                   <a
                     href="https://times-info.net/P28-hyogo/C204/park-detail-BUK0025568/"
                     target="_blank"
-                    className="underline text-blue-500"
+                    className="underline text-blue-500 dark:text-[#9eb4d8]"
                   >
                     タイムズ西宮千歳町
                   </a>
@@ -217,7 +217,7 @@ export default function Home() {
                   <a
                     href="https://www.instagram.com/le_panier_benaton/"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     @le_panier_benaton
                   </a>
@@ -231,7 +231,7 @@ export default function Home() {
                   <a
                     href="https://lin.ee/h2BUTwy"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     LINE公式アカウント
                   </a>{" "}
