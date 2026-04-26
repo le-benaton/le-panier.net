@@ -6,6 +6,7 @@ import FeatureSection from "@/app/feature-section";
 import SelectDialog from "@/app/select-dialog";
 import ImageGallery from "@/app/image-gallery";
 import InstagramCta from "@/app/instagram-cta";
+import IntroSection from "@/app/intro-section";
 import WeeklyMenu from "@/app/weekly-menu";
 import SectionHeading from "@/app/section-heading";
 
@@ -35,19 +36,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="p-5 pt-8 pb-12">
-          <h2 className="text-center text-2xl font-serif mt-8">美味しい食とお酒を日常に。</h2>
-          <p className="md:text-center my-6 mx-3 leading-relaxed">
-            <a href="https://benaton.net/" target="_blank" className="underline text-blue-500">
-              「ル ベナトン」
-            </a>
-            の味を、ご自宅の食卓にも。
-            <br />
-            フレンチシェフが手がけるお惣菜をお持ち帰りいただけます。
-            <br />
-            店内のカウンターでは、ランチやお酒もご用意しています。
-          </p>
-        </div>
+        <IntroSection />
 
         <div className="bg-stone-100 dark:bg-stone-900 pt-14 pb-16 md:pt-[104px] md:pb-28">
           <section className="px-4 max-w-7xl m-auto">
