@@ -2,9 +2,12 @@ import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import Header from "@/app/header";
-import FeatureSection from "@/app/feature-section";
 import SelectDialog from "@/app/select-dialog";
 import ImageGallery from "@/app/image-gallery";
+import InstagramCta from "@/app/instagram-cta";
+import IntroSection from "@/app/intro-section";
+import ServicesSection from "@/app/services-section";
+import WeeklyMenu from "@/app/weekly-menu";
 
 const galleryDir = path.join(process.cwd(), "public/images/gallery");
 const galleryImages = fs.existsSync(galleryDir)
@@ -32,130 +35,15 @@ export default function Home() {
           />
         </div>
 
-        <div className="p-5 pt-8 pb-12">
-          <h2 className="text-center text-2xl font-serif mt-8">美味しい食とお酒を日常に。</h2>
-          <p className="md:text-center my-6 mx-3 leading-relaxed">
-            <a href="https://benaton.net/" target="_blank" className="underline text-blue-500">
-              「ル ベナトン」
-            </a>
-            の味を、ご自宅の食卓にも。
-            <br />
-            フレンチシェフが手がけるお惣菜をお持ち帰りいただけます。
-            <br />
-            店内のカウンターでは、ランチやお酒もご用意しています。
-          </p>
-        </div>
+        <IntroSection />
 
-        <div className="bg-stone-100 dark:bg-stone-900 py-14">
-          <section className="px-4 max-w-7xl m-auto">
-            <h2 className="text-2xl font-serif text-center mb-8">le panier のサービス</h2>
-            <div className="space-y-12">
-              <FeatureSection
-                imageSrc="/images/colum-delica.jpg"
-                imageAlt="デリカテッセンの料理"
-                title="デリカテッセン（惣菜販売）"
-                imageObjectPosition="object-bottom"
-              >
-                <p className="mt-1">
-                  フレンチレストラン「
-                  <a
-                    href="https://benaton.net/"
-                    target="_blank"
-                    className="underline text-blue-500"
-                  >
-                    ル ベナトン
-                  </a>
-                  」から生まれたデリカテッセン。
-                  <br />
-                  シェフが手掛けるフレンチ惣菜を、テイクアウトでお届けします。日によって並ぶメニューが変わります。
-                </p>
-                <h4 className="text-lg font-bold font-serif mt-4 mb-1">販売しているお惣菜の一例</h4>
-                <ul className="list-disc ml-5">
-                  <li>ラザニア(1切れ) / 950円</li>
-                  <li>砂肝のコンフィ(100g) / 500円</li>
-                  <li>ローストビーフ(1g) / 10円</li>
-                </ul>
-              </FeatureSection>
-              <FeatureSection
-                imageSrc="/images/colum-restaurant.jpeg"
-                imageAlt="店内のカウンター席"
-                title="店内でのお食事・お酒"
-                imageObjectPosition="object-center"
-              >
-                <p className="mt-1">
-                  カウンター席では、日替わりや週替わりのお食事メニュー、モーニングなどをご用意しています。
-                </p>
-                <p className="mt-4">
-                  日替わり・週替わりメニューの内容やモーニング営業の最新情報は、
-                  <a
-                    href="https://lin.ee/h2BUTwy"
-                    target="_blank"
-                    className="text-blue-500 underline"
-                  >
-                    公式LINE
-                  </a>
-                  または
-                  <a
-                    href="https://www.instagram.com/le_panier_benaton/"
-                    target="_blank"
-                    className="text-blue-500 underline"
-                  >
-                    Instagram
-                  </a>
-                  でお知らせしております。
-                </p>
-                <h4 className="text-lg font-bold font-serif mt-6 mb-1">ドリンクリスト</h4>
-                <p>ワインのほか、日本酒やノンアルコールドリンクもご用意しております。</p>
-                <div className="mt-4">
-                  <a
-                    href="https://winecode.app/panier"
-                    target="_blank"
-                    className="inline-block px-6 py-3 bg-stone-800 text-white rounded-lg hover:bg-stone-700 transition-colors dark:bg-stone-200 dark:text-stone-800 dark:hover:bg-stone-300"
-                  >
-                    ワイン・ドリンクリストを見る
-                  </a>
-                </div>
-              </FeatureSection>
-              <FeatureSection
-                imageSrc="/images/colum-vegetables.jpg"
-                imageAlt="野菜販売の様子"
-                title="野菜販売"
-                imageObjectPosition="object-center"
-              >
-                <p className="mt-1">
-                  週末の早朝に、シェフが加東市や三田市の道の駅まで足を運び、自分の目で選んだ旬の野菜を店先のワゴンで販売しています。
-                  <br />
-                  減農薬栽培を大切にする「よつばファーム」さんのお野菜も毎週届きます。季節によってはシェフ自家栽培のキウイや柚子、大根がお目見えすることも。
-                </p>
-              </FeatureSection>
-              <FeatureSection
-                imageSrc="/images/colum-event.jpg"
-                imageAlt="イベントの写真"
-                title="イベント会場としてのご利用"
-                imageObjectPosition="object-center"
-              >
-                <p className="mt-1">
-                  プロジェクター完備の店内は、イベントスペースとしてもご利用いただけます。
-                  <br />
-                  ご予約・ご相談は公式LINEまたはInstagram DMから受け付けております。
-                </p>
-                <p className="mt-3">
-                  お店主催のイベントも不定期で開催しております。
-                  <a
-                    href="https://www.instagram.com/le_panier_benaton/"
-                    target="_blank"
-                    className="text-blue-500 underline"
-                  >
-                    最新情報はInstagramをご覧ください
-                  </a>
-                  。
-                </p>
-              </FeatureSection>
-            </div>
-          </section>
-        </div>
+        <ServicesSection />
+
+        <WeeklyMenu />
 
         <ImageGallery images={galleryImages} />
+
+        <InstagramCta />
 
         <div className="grid md:grid-cols-2">
           <div className="h-72 md:h-auto md:min-h-96">
@@ -180,7 +68,7 @@ export default function Home() {
                   <a
                     href="https://maps.app.goo.gl/qibejWXogWvvwiks8"
                     target="_blank"
-                    className="underline text-blue-500"
+                    className="underline text-blue-500 dark:text-[#9eb4d8]"
                   >
                     Google Map
                   </a>
@@ -208,7 +96,7 @@ export default function Home() {
                   <a
                     href="https://times-info.net/P28-hyogo/C204/park-detail-BUK0025568/"
                     target="_blank"
-                    className="underline text-blue-500"
+                    className="underline text-blue-500 dark:text-[#9eb4d8]"
                   >
                     タイムズ西宮千歳町
                   </a>
@@ -221,7 +109,7 @@ export default function Home() {
                   <a
                     href="https://www.instagram.com/le_panier_benaton/"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     @le_panier_benaton
                   </a>
@@ -235,7 +123,7 @@ export default function Home() {
                   <a
                     href="https://lin.ee/h2BUTwy"
                     target="_blank"
-                    className="text-blue-500 underline"
+                    className="text-blue-500 underline dark:text-[#9eb4d8]"
                   >
                     LINE公式アカウント
                   </a>{" "}
