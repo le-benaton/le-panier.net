@@ -5,7 +5,7 @@ type MenuItem = {
   name: string;
   price: { sell: string };
   tastingNote: string | null;
-  tastingTags: { label: string }[];
+  type: "RED" | "WHITE" | "SPARKLING";
   year: number | null;
   threadId: number;
 };
@@ -21,8 +21,6 @@ async function fetchMenu(): Promise<readonly MenuItem[]> {
   }
   return res.json();
 }
-
-const hasLabel = (item: MenuItem, label: string) => item.tastingTags.some((t) => t.label === label);
 
 function PriceTag({ price }: { price: string }) {
   return (
@@ -59,10 +57,11 @@ function NamedDish({ name, price }: { name: string; price: string }) {
 
 export default async function WeeklyMenu() {
   const items = await fetchMenu();
-  const weeklyPasta = items.find((i) => hasLabel(i, "週替わり"));
-  const stewSet = items.find((i) => hasLabel(i, "煮込みセット"));
+  // type の値はワインの色に由来する API 仕様: WHITE=週替わりパスタ / SPARKLING=煮込みセット / RED=日替わり
+  const weeklyPasta = items.find((i) => i.type === "WHITE");
+  const stewSet = items.find((i) => i.type === "SPARKLING");
   const dailyItems = items
-    .filter((i) => hasLabel(i, "日替わり"))
+    .filter((i) => i.type === "RED")
     .sort((a, b) => (a.year ?? Infinity) - (b.year ?? Infinity));
   const dailyPrice = dailyItems[0]?.price.sell;
 
