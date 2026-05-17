@@ -37,9 +37,9 @@ export default function Home() {
 
         <IntroSection />
 
-        <ServicesSection />
-
         <WeeklyMenu />
+
+        <ServicesSection />
 
         <ImageGallery images={galleryImages} />
 
