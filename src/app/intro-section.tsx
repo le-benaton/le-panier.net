@@ -13,7 +13,7 @@ export default function IntroSection() {
 
           <div className="md:pt-4">
             <div className="font-serif text-lg md:text-xl tracking-wide text-[#1a2240] dark:text-[#e8e4d9] mb-4 md:mb-6">
-              ミシュランガイド兵庫版にも掲載されたフレンチレストラン、
+              ミシュランガイド兵庫版にも掲載されたフレンチレストラン
               <a
                 href="https://benaton.net/"
                 target="_blank"
@@ -22,7 +22,7 @@ export default function IntroSection() {
               >
                 「ル ベナトン」
               </a>
-              の味を、ご自宅の食卓にも。
+              。その味を、一皿から。
             </div>
           </div>
         </div>
