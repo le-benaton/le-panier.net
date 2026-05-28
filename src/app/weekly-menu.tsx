@@ -5,7 +5,7 @@ type MenuItem = {
   name: string;
   price: { sell: string };
   tastingNote: string | null;
-  type: "RED" | "WHITE" | "SPARKLING";
+  type: "RED" | "WHITE" | "SPARKLING" | "CHAMPAGNE";
   year: number | null;
   threadId: number;
 };
@@ -57,9 +57,10 @@ function NamedDish({ name, price }: { name: string; price: string }) {
 
 export default async function WeeklyMenu() {
   const items = await fetchMenu();
-  // type の値はワインの色に由来する API 仕様: WHITE=週替わりパスタ / SPARKLING=煮込みセット / RED=日替わり
+  // type の値はワインの色に由来する API 仕様: WHITE=週替わりパスタ / SPARKLING=煮込みセット / RED=日替わり / CHAMPAGNE=モーニング営業日
   const weeklyPasta = items.find((i) => i.type === "WHITE");
   const stewSet = items.find((i) => i.type === "SPARKLING");
+  const morning = items.find((i) => i.type === "CHAMPAGNE");
   const dailyItems = items
     .filter((i) => i.type === "RED")
     .sort((a, b) => (a.year ?? Infinity) - (b.year ?? Infinity));
@@ -116,6 +117,20 @@ export default async function WeeklyMenu() {
         <p className="mt-7 md:mt-11 text-xs text-[#6b6b6b] dark:text-[#8a8a8a] text-center">
           メニューは仕入れにより変更の場合があります
         </p>
+
+        {morning && (
+          <div className="mt-9 md:mt-14 pt-9 md:pt-14 border-t border-black/[0.14] dark:border-white/[0.14]">
+            <SubTitle en="Morning Hours" jp={morning.name} />
+            {morning.tastingNote && (
+              <div className="text-base md:text-lg leading-[1.7] tracking-[0.2px] whitespace-pre-line">
+                {morning.tastingNote}
+              </div>
+            )}
+            <p className="mt-7 md:mt-11 text-xs text-[#6b6b6b] dark:text-[#8a8a8a] text-center">
+              営業日は変更になる場合があります
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
