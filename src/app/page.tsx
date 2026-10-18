@@ -1,3 +1,4 @@
+import { RESERVATION_URL } from "@/lib/links";
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
@@ -117,8 +118,16 @@ export default function Home() {
               </div>
               <div>
                 <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  予約・お問合せ
+                  お席のご予約
                 </dt>
+                <dd className="mt-1">
+                  <a href={RESERVATION_URL} className="text-blue-500 underline dark:text-[#9eb4d8]">
+                    オンライン予約
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">お問合せ</dt>
                 <dd className="mt-1">
                   <a
                     href="https://lin.ee/h2BUTwy"
