@@ -1,5 +1,6 @@
 "use client";
 
+import { RESERVATION_URL } from "@/lib/links";
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
@@ -36,6 +37,12 @@ function SelectDialogContent() {
                 </div>
               </div>
             </div>
+            <a
+              href={RESERVATION_URL}
+              className="bg-[#1a2240] text-white px-4 py-3 w-full block text-center hover:opacity-80 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white"
+            >
+              ネット予約
+            </a>
             <button
               className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border"
               onClick={() => setDismissed(true)}
@@ -58,7 +65,7 @@ function SelectDialogContent() {
               className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center"
               onClick={() => (location.href = "https://lin.ee/h2BUTwy")}
             >
-              予約・お問合せ（LINE公式アカウント）
+              お問合せ（LINE公式アカウント）
             </button>
           </DialogPanel>
         </div>

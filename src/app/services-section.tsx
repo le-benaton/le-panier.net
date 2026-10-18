@@ -1,3 +1,4 @@
+import { RESERVATION_URL } from "@/lib/links";
 import Image from "next/image";
 import { ReactNode } from "react";
 import SectionHeading from "@/app/section-heading";
@@ -12,6 +13,7 @@ type ServiceItem = {
   imageObjectPosition?: string;
   lead: ReactNode;
   aux?: ReactNode;
+  reservationHref?: string;
   subhead?: string;
   items?: { name: string; qty: string; price: number }[];
   auxBody?: ReactNode;
@@ -73,6 +75,7 @@ const SERVICES: ServiceItem[] = [
         でお知らせしております。
       </>
     ),
+    reservationHref: RESERVATION_URL,
     subhead: "ドリンクリスト",
     auxBody: "ワインのほか、日本酒やノンアルコールドリンクもご用意しております。",
     cta: { label: "ワイン・ドリンクリストを見る", href: WINECODE_URL },
@@ -218,6 +221,15 @@ function ServiceRow({ s, index }: { s: ServiceItem; index: number }) {
           <div className="text-sm leading-loose text-[#6b6b6b] dark:text-[#8a8a8a] mb-3 md:mb-4">
             {s.aux}
           </div>
+        )}
+        {s.reservationHref && (
+          <a
+            href={s.reservationHref}
+            className="inline-flex min-h-11 items-center gap-2.5 border-b border-[#1a2240] text-sm text-[#1a2240] hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 dark:border-[#e8e4d9] dark:text-[#e8e4d9]"
+          >
+            お席を予約する
+            <span aria-hidden="true">→</span>
+          </a>
         )}
         {s.items && s.subhead && <PriceList subhead={s.subhead} items={s.items} />}
         {s.cta && s.subhead && s.auxBody && (
