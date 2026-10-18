@@ -41,7 +41,7 @@ function SelectDialogContent() {
               href={RESERVATION_URL}
               className="bg-[#1a2240] text-white px-4 py-3 w-full block text-center hover:opacity-80 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white"
             >
-              ネット予約
+              オンライン予約
             </a>
             <button
               className="bg-gray-50 text-blue-500 px-4 py-3 w-full block text-center border"

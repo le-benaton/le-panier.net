@@ -122,7 +122,7 @@ export default function Home() {
                 </dt>
                 <dd className="mt-1">
                   <a href={RESERVATION_URL} className="text-blue-500 underline dark:text-[#9eb4d8]">
-                    ネット予約
+                    オンライン予約
                   </a>
                 </dd>
               </div>
