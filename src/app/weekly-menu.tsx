@@ -69,13 +69,13 @@ export default async function WeeklyMenu() {
   return (
     <section className="border-y border-black/[0.08] dark:border-white/[0.07] bg-[#f3ede3] dark:bg-[#1a1814] text-[#111] dark:text-[#f1efe9] px-6 pt-14 pb-16 md:px-10 md:pt-[104px] md:pb-28">
       <div className="max-w-[920px] mx-auto">
-        <SectionHeading en="Weekly & Daily Menu" jp="週替わり・日替わりメニュー" />
+        <SectionHeading en="Weekly & Daily Menu" jp="週替わり・日替わりセット" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[72px] mt-3 md:mt-8 items-start">
           <div className="flex flex-col gap-9 md:gap-14">
             {weeklyPasta && (
               <div>
-                <SubTitle en="Pasta of the Week" jp="週替わりパスタ" />
+                <SubTitle en="Pasta of the Week" jp="週替わりパスタセット" />
                 <NamedDish name={weeklyPasta.name} price={weeklyPasta.price.sell} />
               </div>
             )}
@@ -90,7 +90,7 @@ export default async function WeeklyMenu() {
           {dailyItems.length > 0 && (
             <div>
               <div className="flex items-end justify-between gap-3 mb-[14px] md:mb-5">
-                <SubTitle en="Daily Specials" jp="日替わりメニュー" />
+                <SubTitle en="Daily Specials" jp="日替わりセット" />
                 {dailyPrice && (
                   <div className="pb-1">
                     <PriceTag price={dailyPrice} />
