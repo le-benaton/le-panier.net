@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# le panier
 
-## Getting Started
+ル パニエのWebサイトです。Next.jsの静的エクスポートをCloudflare Workersで配信します。
 
-First, run the development server:
+## 開発とビルド
+
+Node.js 24を使用します。`.env.example`を参考に、`.env.local`に`MENU_API_URL`を設定してください。
+ビルド時に週替わり・日替わりメニューAPIを取得してHTMLへ埋め込むため、APIに接続できる環境が必要です。
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run build`で`out/`に公開ファイルを出力します。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## デプロイ
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Cloudflareアカウント: `rdlabo`（`57bafd0e2348b266e72e821f03157b41`）
+- Worker名: `panier`
+- 公開先: `le-panier.net` / `www.le-panier.net`
+- 配信ファイル: `out/`（404ページを含むNext.jsの静的エクスポート）
 
-## Learn More
+ローカルからは`npm run deploy`でビルドと本番デプロイを実行します。
 
-To learn more about Next.js, take a look at the following resources:
+GitHub Actionsは以下を実行します。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- mainへのpush: 本番デプロイ
+- 同一リポジトリ内のPR: `versions upload`で本番を変更せずプレビューを作成。ビルド済みの`out/`も`panier-static`アーティファクトに7日間保存
+- 定期実行: 毎週月曜の日本時間00:00、06:00、12:00、18:00にメニューを再取得し、本番へ配信
+- 定期実行ワークフローの`workflow_dispatch`: 手動でメニューを更新して配信
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+本番デプロイと定期デプロイは同じconcurrencyグループで直列実行します。
 
-## Deploy on Vercel
+### GitHub Repository Secrets
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| 名前                   | 用途                                                                                                              |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `MENU_API_URL`         | ビルド時に取得するメニューAPIのURL                                                                                |
+| `CLOUDFLARE_API_TOKEN` | rdlaboアカウントのWorkersスクリプト編集、およびle-panier.netゾーンの読み取り・Workersルート編集権限を持つトークン |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+独自ドメインの配信には、`le-panier.net`をrdlaboアカウントへ追加し、
+既存DNSレコードを確認したうえでCloudflare指定のネームサーバーに切り替える必要があります。
+Firebase向けのA/CNAMEレコードがWorkerの独自ドメイン設定と競合する場合は、
+旧レコードを控えてからWorker用レコードに置き換えてください。
