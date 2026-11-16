@@ -4,6 +4,7 @@ on: pull_request
 
 permissions:
   contents: read
+  deployments: write
 
 concurrency:
   group: cloudflare-preview-${{ github.event.pull_request.number }}
@@ -13,6 +14,9 @@ jobs:
   build_and_preview:
     if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
+    environment:
+      name: preview-pr-${{ github.event.pull_request.number }}
+      url: ${{ steps.preview.outputs.deployment-url }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -28,8 +32,19 @@ jobs:
           path: out/
           if-no-files-found: error
           retention-days: 7
-      - uses: cloudflare/wrangler-action@v3
+      - name: Upload preview
+        id: preview
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: "57bafd0e2348b266e72e821f03157b41"
           command: versions upload --preview-alias pr-${{ github.event.pull_request.number }}
+      - name: Show preview URL
+        env:
+          PREVIEW_URL: ${{ steps.preview.outputs.deployment-url }}
+        run: |
+          if [ -z "$PREVIEW_URL" ]; then
+            echo "::error::Cloudflare did not return a preview URL"
+            exit 1
+          fi
+          printf '### Preview\n\n[Open preview](%s)\n' "$PREVIEW_URL" >> "$GITHUB_STEP_SUMMARY"
