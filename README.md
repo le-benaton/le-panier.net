@@ -32,6 +32,9 @@ GitHub Actionsは以下を実行します。
 
 本番デプロイと定期デプロイは同じconcurrencyグループで直列実行します。
 
+PRのプレビュー作成が成功すると、PRのデプロイ欄に表示される「View deployment」から画面を確認できます。
+Actionsの実行サマリーにも「Open preview」リンクを表示します。PRを更新すると、新しい変更を反映したプレビューURLに更新されます。
+
 ### GitHub Repository Secrets
 
 | 名前                   | 用途                                                                                                              |
