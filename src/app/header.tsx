@@ -26,7 +26,7 @@ export default function Header({ isTopPage = false }: HeaderProps) {
         </div>
         <a
           href={RESERVATION_URL}
-          className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-sm bg-[#1a2240] px-3 sm:px-4 py-2 text-sm font-medium text-white hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1a2240] dark:bg-[#e8e4d9] dark:text-[#1a2240] dark:focus-visible:outline-[#e8e4d9]"
+          className="fixed top-0 right-2 z-[5] inline-flex min-h-11 shrink-0 items-center justify-center rounded-t-none rounded-b-lg bg-[#1a2240] px-8 py-3.5 text-sm font-medium text-white hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1a2240] dark:bg-[#e8e4d9] dark:text-[#1a2240] dark:focus-visible:outline-[#e8e4d9]"
         >
           オンライン予約
         </a>
