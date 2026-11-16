@@ -1,0 +1,35 @@
+name: Preview on Cloudflare
+
+on: pull_request
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build_and_preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci && npm run build
+        env:
+          MENU_API_URL: ${{ secrets.MENU_API_URL }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: panier-static
+          path: out/
+          if-no-files-found: error
+          retention-days: 7
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: "57bafd0e2348b266e72e821f03157b41"
+          command: versions upload --preview-alias pr-${{ github.event.pull_request.number }}

@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "panier",
+  "account_id": "57bafd0e2348b266e72e821f03157b41",
+  "compatibility_date": "2026-11-16",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page",
+  },
+  "routes": [
+    { "pattern": "le-panier.net", "custom_domain": true },
+    { "pattern": "www.le-panier.net", "custom_domain": true },
+  ],
+}
